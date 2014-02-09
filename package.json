@@ -1,0 +1,20 @@
+{
+    "name": "application-name",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "moment": "*",
+        "mongoose":"*",
+        "express": "3.4.7",
+        "request":"*",
+        "cheerio":"*",
+        "xmlparser":"*",
+        "xml2js":"*",
+        "mongodb":"*",
+        "q":"*",
+        "jshtml": "*"
+    }
+}
