@@ -1,0 +1,38 @@
+doctype html
+html(ng-app='corsNgApp',id='corsNgApp',ng-controller="MainCtrl")
+  head
+    title= title
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet",href="theme/css/bootstrap-{{skin}}.css")
+    link(href="/theme/css/bootstrap-responsive.css", rel="stylesheet")
+    link(href="/theme/css/charisma-app.css", rel="stylesheet")
+    link(href="/theme/css/jquery-ui-1.8.21.custom.css", rel="stylesheet")
+    style.
+        body{
+            padding-bottom: 40px;
+        }
+
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+        .myhide {
+            display: none;
+        }
+
+  body
+    block content
+
+    script(src='/bower_components/angular/angular.js')
+    script(src='/bower_components/angular-resource/angular-resource.js')
+    script(src='/bower_components/angular-cookies/angular-cookies.js')
+    script(src='/bower_components/angular-sanitize/angular-sanitize.js')
+    script(src='/bower_components/angular-route/angular-route.js')
+    script(src="scripts/app.js")
+    script(src="scripts/controllers/main.js")
+    script(src="scripts/services/cookie.js")
+    script(src="scripts/services/Language.js")
+    script(src="scripts/controllers/test.js")
+    script(src="/theme/js/jquery-1.7.2.min.js")
+    script(src="/theme/js/jquery-ui-1.8.21.custom.min.js")
+    script(src="/theme/js/bootstrap-dropdown.js")
+    script(src="/theme/js/bootstrap-tab.js")

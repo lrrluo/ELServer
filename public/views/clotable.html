@@ -1,0 +1,88 @@
+<div class="box span12" ng-show="!loading">
+    <div class="box-header well" data-original-title>
+        <h2><i class="icon-user"></i>{{option.title}}</h2>
+        <div style="float: right" ng-class="{myhide:!option.operate[0].need}" >
+            <a href="#/{{option.restName}}/0" class="btn btn-primary"  title="增加一个记录" style="width: 72" >
+                {{option.operate[0].name}}<i class="icon icon-add">
+                </i>
+            </a>
+        </div>
+    </div>
+    <div class="box-content">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="dataTables_length" id="DataTables_Table_0_length">
+                    <label>
+                        <select ng-change="changeSize(this.value)" ng-model="pageSize">
+                            <option selected="selected" value="10" >10</option>
+                            <option value="20" >20</option>
+                            <option value="30" >30</option>
+                        </select> {{pageSize}}
+                    </label>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="input-append">
+                    <select ng-change="changeSearch()" ng-model="searchBy">
+                        <option ng-repeat="s in option.searchBy" value="{{s.value}}">{{s.text}}</option>
+                    </select>
+                    <input  type="{{searchType}}" size="5" ng-model="searText"><button ng-click="search()" class="btn btn-primary" type="button">{{searchText}}</button>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-bordered bootstrap-datatable datatable">
+            <thead>
+            <tr>
+                <th>{{idText}}</th>
+                <th ng-repeat="head in option.headers track by $index"
+                    ng-class="{pointer: head.order}" ng-click="sort(head.orderName)">{{head.name}}</th>
+                <th>{{operText}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in tableConfig.data track by $index">
+                <td class="center"/>
+                <span class="label label-success">{{$index+1}}</span>
+                </td>
+                <td class="center" ng-repeat="a in col" >
+                    <span class="label label-success">{{option.content($index,item)}}</span>
+                <td class="center">
+                    <a class="btn btn-success" href="{{option.operate[1].url}}/{{item.id}}" ng-class="{myhide:!option.operate[1].need}">
+                        <i class="icon-zoom-in icon-white"></i>
+                        {{option.operate[1].name}}
+                    </a>
+                    <a class="btn btn-info" href="#/{{option.restName}}/{{item.id}}" ng-class="{myhide:!canEdit}">
+                        <i class="icon-edit icon-white"></i>
+                        {{editText}}
+                    </a>
+                    <a class="btn btn-danger" ng-click="del(item.id)" ng-class="{myhide:!canDele}">
+                        <i class="icon-trash icon-white"></i>
+                        {{delText}}
+                    </a>
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="DataTables_Table_0_info" class="dataTables_info">
+                    第{{tableConfig.pageNow}}页 共{{tableConfig.totalPage}}页 共{{tableConfig.total}}记录
+                </div>
+            </div>
+            <div class="span12 center">
+                <div class="dataTables_paginate paging_bootstrap pagination">
+                    <ul>
+                        <li class="prev" ng-click="changePage('first')" ng-class="{disabled : !tableConfig.pageState.first}"><a >第一页</a></li>
+                        <li class="prev" ng-click="changePage('pre')"   ng-class="{disabled : !tableConfig.pageState.pre}"><a >上一页</a></li>
+                        <li class="next" ng-click="changePage('next')"  ng-class="{disabled : !tableConfig.pageState.next}"><a >下一页</a></li>
+                        <li class="next" ng-click="changePage('last')"  ng-class="{disabled : !tableConfig.pageState.last}"><a >最后一页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/span-->
+<div  id="loadBack" ng-show="loading">
+    <img src="img/ajax-loaders/ajax-loader-7.gif" class="ajax-loader"/>
+</div>

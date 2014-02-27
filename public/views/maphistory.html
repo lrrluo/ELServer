@@ -1,0 +1,93 @@
+<div class="box span4">
+    <div class="box-header well" data-original-title>
+        <h2><i class="icon-edit"></i> {{title}}</h2>
+        <!--div class="box-icon">
+            <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+            <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+            <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+        </div-->
+    </div>
+    <div class="box-content">
+        <form class="form-horizontal">
+            <fieldset>
+                <!--div class="control-group">
+                    <label class="control-label" for="mobileStation">请选择移动站：</label>
+                    <div class="controls">
+                        <select id="mapType" ng-model="mapType" ng-change="switchMap()">
+                            <option value="0">百度地图</option>
+                            <option value="1">谷歌地图</option>
+                        </select>
+                    </div>
+                </div-->
+
+                <div class="control-group">
+                    <label class="control-label" for="mobileStation" ng-bind="ms"></label>
+                    <div class="controls">
+                        <select id="mobileStation" ng-model="mobile">
+                            <option ng-repeat="mo in mobileList track by $index" value="{{$index}}">{{mo}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="jie" ng-bind="st"></label>
+                    <div class="controls">
+                        <select id="jie" ng-model="jieState">
+                            <option ng-repeat="sta in jieList track by $index" value="{{sta.value}}">{{sta.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="color" ng-bind="co"></label>
+                    <div class="controls">
+                        <select id="color" ng-model="color">
+                            <option ng-repeat="co in colorList track by $index" value="{{$index}}">{{co}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="startTime" ng-bind="ST"></label>
+                    <div class="controls">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" id="startTime" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                <div class="input-append"><input type="text" class="input-large" data-ng-model="startTime"><span class="add-on"><i class="icon-calendar"></i></span>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="startTime" data-datetimepicker-config="{ dropdownSelector: '#startTime' }"/>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="control-group">
+                    <label class="control-label" for="endTime" ng-bind="ET"></label>
+                    <div class="controls">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" id="endTime" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                <div class="input-append"><input type="text"  class="input-large" data-ng-model="endTime"><span class="add-on"><i class="icon-calendar"></i></span>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="endTime" data-datetimepicker-config="{ dropdownSelector: '#endTime' }"/>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" ng-bind="submit">显示轨迹</button>
+                    <button class="btn">Cancel</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div><!--/span-->
+<!-- content ends -->
+<div id="content" class="span8" style="height: 800px">
+</div>

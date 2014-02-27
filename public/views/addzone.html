@@ -1,0 +1,32 @@
+<div class="box span12">
+    <div class="box-header well" data-original-title>
+        <h2><i class="icon-edit"></i> {{title}}</h2>
+    </div>
+    <div class="box-content">
+
+        <form class="form-horizontal" name="addForm">
+            <fieldset>
+                <div class="control-group warning">
+                    <label class="control-label" for="inputName" ng-bind="zm"></label>
+                    <div class="controls">
+                        <input type="text" id="inputName" name="name" ng-model="model.zoneName" required>
+                        <span class="help-inline error" ng-show="addForm.name.$error.required" ng-bind="req"></span>
+                    </div>
+                </div>
+
+                <div class="control-group warning">
+                    <label class="control-label" for="inputpoints" ng-bind="points"></label>
+                    <div class="controls">
+                        <input type="text"  id="inputpoints" name="points" required ng-model="model.points">
+                        <span class="help-inline" ng-show="addForm.points.$error.required" ng-bind="req"></span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" ng-disabled="!addForm.$valid" ng-click="add()" ng-bind="submit"></button>
+                    <button class="btn btn-warning" ng-click="backTo()" ng-bind="back"></button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div><!--/span-->

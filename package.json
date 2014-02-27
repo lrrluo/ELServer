@@ -15,6 +15,7 @@
         "xml2js":"*",
         "mongodb":"*",
         "q":"*",
+        "jade": "*",
         "jshtml": "*"
     }
 }

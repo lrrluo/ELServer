@@ -1,0 +1,72 @@
+<div class="box span12">
+    <div class="box-header well" data-original-title>
+        <h2><i class="icon-edit"></i> {{title}}</h2>
+    </div>
+    <div class="box-content">
+        <form class="form-horizontal" name="addForm">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="control-group warning">
+                            <label class="control-label" for="inputName" ng-bind="um"></label>
+                            <div class="controls">
+                                <input type="text" id="inputName" name="name" ng-model="model.userName" required>
+                                <span class="help-inline error" ng-show="addForm.name.$error.required" ng-bind="req"></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="control-group warning">
+                            <label class="control-label" for="serverType" ng-bind="ser"></label>
+                            <div class="controls">
+                                <input type="text"  id="serverType" name="serverType" required ng-model="model.serverType">
+                                <span class="help-inline" ng-show="addForm.serverType.$error.required" ng-bind="req"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="control-group warning">
+                            <label class="control-label" for="account" ng-bind="ac"></label>
+                            <div class="controls">
+                                <input type="number" min="0" id="account" name="account" required ng-model="model.account">
+                                <span class="help-inline" ng-show="addForm.account.$error.required" ng-bind="req"></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="control-group warning">
+                            <label class="control-label" for="phone" ng-bind="ph"></label>
+                            <div class="controls">
+                                <input type="text"  id="phone" name="phone" required ng-model="model.phone">
+                                <span class="help-inline" ng-show="addForm.phone.$error.required" ng-bind="req"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="control-group warning">
+                            <label class="control-label" for="expirationDate" ng-bind="exDate"></label>
+                            <div class="controls">
+                                <input type="date"  id="expirationDate" name="expirationDate" required ng-model="model.expirationDate">
+                                <span class="help-inline" ng-show="addForm.expirationDate.$error.required" ng-bind="req"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-actions">
+                            <button class="btn btn-primary" ng-disabled="!addForm.$valid" ng-click="add()" ng-bind="submit"></button>
+                            <button class="btn btn-warning" ng-click="backTo()" ng-bind="back"></button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div><!--/span-->
