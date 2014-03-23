@@ -1,5 +1,5 @@
 doctype html
-html(ng-app='corsNgApp',id='corsNgApp',ng-controller="MainCtrl")
+html(ng-app='easyApp',id='easyApp',ng-controller="MainCtrl")
   head
     title= title
     meta(name="viewport",content="width=device-width, initial-scale=1.0")
@@ -30,9 +30,12 @@ html(ng-app='corsNgApp',id='corsNgApp',ng-controller="MainCtrl")
     script(src="scripts/app.js")
     script(src="scripts/controllers/main.js")
     script(src="scripts/services/cookie.js")
+    script(src="scripts/directives/highcharts-ng.js")
     script(src="scripts/services/Language.js")
-    script(src="scripts/controllers/test.js")
+    script(src="scripts/controllers/weather.js")
+    script(src="scripts/controllers/zhibo.js")
     script(src="/theme/js/jquery-1.7.2.min.js")
     script(src="/theme/js/jquery-ui-1.8.21.custom.min.js")
+    script(src="/lib/highcharts.js")
     script(src="/theme/js/bootstrap-dropdown.js")
     script(src="/theme/js/bootstrap-tab.js")

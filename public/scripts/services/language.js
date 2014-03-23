@@ -1,11 +1,25 @@
 'use strict';
 
-angular.module('corsNgApp')
+angular.module('easyApp')
   .constant('Language', {
         common:{
             req:["The required input",'这是必填项'],
             back:['Back',"返回"],
+            sear : ['Search','查询'],
             submit:['Submit',"提交记录"]
+        },
+        zhibo:{
+            title : ["Sports Live Show",'体育直播表'],
+            time : ["Time",'直播时间'],
+            content : ["Match",'赛事']
+        },
+        weather:{
+            highTem: ['Highest Temperature','最高温度'],
+            lowTem: ['Lowest Temperature','最低温度'],
+            title:["Whether forcast",'天气查询'] ,
+            placeholderCity: ["Please enter the city","请输入城市名称"],
+            cityName : ['City Name:', '城市名称'],
+            errorCity : ['The City name is wrong,Please fill another city name.', '输入的城市或省名字错误，请重新输入.']
         },
         main:{
             theme:["Change Theme/Skin",'切换主题'],

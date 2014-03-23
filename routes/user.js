@@ -4,5 +4,7 @@
  */
 
 exports.list = function(req, res){
-  res.send("respond with a resource");
+    res.render('index');
+    res.render('index', { title: 'Express' });
+  //res.send("respond with a resource");
 };

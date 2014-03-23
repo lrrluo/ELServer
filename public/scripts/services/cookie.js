@@ -1,5 +1,5 @@
 'use strict';
-angular.module('corsNgApp')
+angular.module('easyApp')
   .factory('cookie', function ($cookieStore) {
     // Service logic
     // ...

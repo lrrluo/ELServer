@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('corsNgApp', [
+angular.module('easyApp', [
+  'highcharts-ng',
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -9,12 +10,12 @@ angular.module('corsNgApp', [
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/weather', {
-            templateUrl: 'views/weather.html',
+            templateUrl: 'views/weather',
             controller: 'WeatherCtrl'
         })
-        .when('/mapView', {
-            templateUrl: 'views/mapview.html',
-            controller: 'MapviewCtrl'
+        .when('/zhibo', {
+            templateUrl: 'views/zhibo',
+            controller: 'ZhiboCtrl'
         })
         .when('/online', {
             templateUrl: 'views/online.html',

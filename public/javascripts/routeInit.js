@@ -11,27 +11,49 @@ exports.init = function(app,routes){
     var mom = require("moment");
     var webCtrl = require('../../common/webCtrl').webCtrl;
 
+
+    app.get('/', routes.index);
+
     app.get('/service/IP', function(req,res,next){
         console.log("IP");
         res.send("IP service");
     });
-    app.get('/', routes.index);
+
+    app.get('/views/weather',function(req,res){
+        res.render('weather',{});
+    })
+
+    app.get('/views/zhibo',function(req,res){
+        res.render('zhibo',{});
+    })
 
     app.get('/service/weather', function(req,res,next){
-        var pro,city;
+        var pro,city , cb;
         city = req.query.city;
+        cb = req.query.callback;
         if(city){
             console.log(city);
             pro = webCtrl.getWeather(city);
             pro.then(function(data){
-                res.send(req.query.callback+'('+JSON.stringify(data)+')');
+                if(cb){
+                    res.send(cb+'('+JSON.stringify(data)+')');
+                }
+                else
+                    res.send(JSON.stringify(data));
             },function(err){
-                res.send(req.query.callback+'('+JSON.stringify({status:'error'})+')');
+                if(cb){
+                    res.send(cb +'('+JSON.stringify({status:'error'})+')');
+                }
+                else
+                    res.send(JSON.stringify({status:'error'}));
             })
         }
         else{
-            console.log(req.query.city);
-            res.send(req.query.callback+'('+JSON.stringify({error:"please specity the city name"})+')');
+            if(cb){
+                res.send(cb+'('+JSON.stringify({error:"please specity the city name"})+')');
+            }
+            else
+                res.send(JSON.stringify({error:"please specity the city name"}));
         }
     });
 
@@ -121,7 +143,12 @@ exports.init = function(app,routes){
         var time = mom().format("MM月DD日");
         var pro = sp.get({$regex : time+".*"});
         pro.then(function(data){
-            res.send(req.query.callback+'('+JSON.stringify(data)+')');
+            if(req.query.callback){
+                res.send(req.query.callback+'('+JSON.stringify(data)+')');
+            }
+            else{
+                res.send(JSON.stringify(data));
+            }
         })
     });
 

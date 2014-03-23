@@ -23,55 +23,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SLhandle.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/SLhandle.js">
+      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="23" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="2112">
+            <state line="28" column="66" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1410">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webCtrl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/webCtrl.js">
+      <file leaf-file-name="zhibo.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/zhibo.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="1" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2448">
+            <state line="13" column="16" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.html">
+      <file leaf-file-name="language.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/scripts/services/language.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="253" column="19" selection-start="6331" selection-end="6331" vertical-scroll-proportion="0.0" vertical-offset="5880" max-vertical-offset="15216">
+            <state line="68" column="36" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2670">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/util.js">
+      <file leaf-file-name="weather.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/weather.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="19" selection-start="842" selection-end="842" vertical-scroll-proportion="0.20689656" vertical-offset="720" max-vertical-offset="3048">
+            <state line="11" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="-13.2" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/models.js">
+      <file leaf-file-name="weather.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/weather.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="17" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="1128" max-vertical-offset="2256">
+            <state line="106" column="21" selection-start="4046" selection-end="4046" vertical-scroll-proportion="0.31034482" vertical-offset="1380" max-vertical-offset="2220">
+              <folding>
+                <element signature="e#687#1697#0" expanded="false" />
+                <element signature="e#863#1683#0" expanded="false" />
+                <element signature="e#2267#3552#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adduser.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/adduser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="24" selection-start="341" selection-end="827" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="2340">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routeInit.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/routeInit.js">
+      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="52" selection-start="0" selection-end="4771" vertical-scroll-proportion="0.0" vertical-offset="3072" max-vertical-offset="3768">
+            <state line="84" column="26" selection-start="2834" selection-end="2834" vertical-scroll-proportion="0.0" vertical-offset="2490" max-vertical-offset="3390">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/scripts/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="10" selection-start="112" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1830">
               <folding />
             </state>
           </provider>
@@ -87,21 +109,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../directive.ngdoc" />
-        <option value="$PROJECT_DIR$/public/resourses/tv.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/common/db.js" />
-        <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/common/SLhandle.js" />
-        <option value="$PROJECT_DIR$/model/models.js" />
-        <option value="$PROJECT_DIR$/public/ngapp/app/views/weather.html" />
-        <option value="$PROJECT_DIR$/public/ngapp/app/scripts/controllers/weather.js" />
-        <option value="$PROJECT_DIR$/public/ngapp/app/scripts/services/localstorage.js" />
-        <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/common/weaCtrl.js" />
-        <option value="$PROJECT_DIR$/common/webCtrl.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/zhibo.jade" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/log.js" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/zhibo.js" />
         <option value="$PROJECT_DIR$/public/javascripts/routeInit.js" />
-        <option value="$PROJECT_DIR$/common/util.js" />
+        <option value="$PROJECT_DIR$/public/lib/highcharts.js" />
+        <option value="$PROJECT_DIR$/public/scripts/directives/highcharts-ng.js" />
+        <option value="$PROJECT_DIR$/public/scripts/directives/hc.js" />
+        <option value="$PROJECT_DIR$/angular-1.08.js" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/public/scripts/app.js" />
+        <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/views/weather.jade" />
+        <option value="$PROJECT_DIR$/public/scripts/services/language.js" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/weather.js" />
       </list>
     </option>
   </component>
@@ -110,6 +133,22 @@
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -137,6 +176,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -151,7 +191,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ELserver" />
+              <option name="myItemId" value="ELServer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -161,7 +201,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ELServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="ELserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ELServer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -175,7 +233,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ELserver" />
+              <option name="myItemId" value="ELServer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -183,7 +241,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -193,42 +251,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ELserver" />
+              <option name="myItemId" value="ELServer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ELserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ELserver" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Jade" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\workspace\git_ngapp\ELServer\public\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\workspace\git_ngapp\ELServer\public\lib" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -263,6 +318,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5b37d8a8-23a9-45a9-9365-8fbf0bacaa03" name="Default" comment="" />
@@ -272,14 +344,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33235726" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21449487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -303,107 +375,138 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="ELserver" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="ELServer" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/models.js">
+    <entry file="file://$PROJECT_DIR$/public/scripts/directives/highcharts-ng.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="17" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="2256">
+        <state line="196" column="27" selection-start="7742" selection-end="7742" vertical-scroll-proportion="-229.2" vertical-offset="0" max-vertical-offset="9060" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/zhibo.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="16" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/routeInit.js">
+    <entry file="file://$USER_HOME$/Desktop/highcharts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="32" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="3120">
-          <folding />
-        </state>
+        <state line="6" column="2" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="9150" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/util.js">
+    <entry file="file://$PROJECT_DIR$/public/lib/highcharts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="42" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="1680">
-          <folding />
-        </state>
+        <state line="6" column="2" selection-start="110" selection-end="110" vertical-scroll-proportion="0.2522046" vertical-offset="37" max-vertical-offset="9150" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ngapp/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="888" selection-end="888" vertical-scroll-proportion="0.91470057" vertical-offset="240" max-vertical-offset="1008" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ngapp/app/views/setconfig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="480" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/resourses/getSupportCity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/resourses/allcity.xml">
+    <entry file="file://$PROJECT_DIR$/angular-1.08.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.js">
+    <entry file="file://$PROJECT_DIR$/public/scripts/directives/clotable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552" />
+        <state line="7" column="40" selection-start="178" selection-end="178" vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="6270" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/resourses/cities.xml">
+    <entry file="file://$PROJECT_DIR$/public/lib/angular-1.08.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="1" selection-start="40" selection-end="40" vertical-scroll-proportion="0.04232804" vertical-offset="0" max-vertical-offset="9984" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5070" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="45" selection-start="718" selection-end="718" vertical-scroll-proportion="0.82758623" vertical-offset="120" max-vertical-offset="1032" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/SLhandle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="2112">
+        <state line="28" column="66" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1410">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="19" selection-start="6331" selection-end="6331" vertical-scroll-proportion="0.0" vertical-offset="5880" max-vertical-offset="15216">
-          <folding />
-        </state>
+        <state line="9" column="26" selection-start="555" selection-end="555" vertical-scroll-proportion="0.53149605" vertical-offset="0" max-vertical-offset="2130" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/webCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="1" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="2448">
-          <folding />
-        </state>
+        <state line="48" column="14" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.7241379" vertical-offset="1020" max-vertical-offset="3060" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/models.js">
+    <entry file="file://$PROJECT_DIR$/public/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="17" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="2256">
+        <state line="7" column="10" selection-start="112" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/routeInit.js">
+    <entry file="file://$PROJECT_DIR$/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="52" selection-start="0" selection-end="4771" vertical-scroll-proportion="0.0" vertical-offset="3072" max-vertical-offset="3768">
+        <state line="84" column="26" selection-start="2834" selection-end="2834" vertical-scroll-proportion="0.0" vertical-offset="2490" max-vertical-offset="3390">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/util.js">
+    <entry file="file://$PROJECT_DIR$/public/views/adduser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="19" selection-start="842" selection-end="842" vertical-scroll-proportion="0.20689656" vertical-offset="720" max-vertical-offset="3048">
+        <state line="10" column="24" selection-start="341" selection-end="827" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="2340">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/weather.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="-13.2" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/services/language.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="36" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2670">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/weather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="21" selection-start="4046" selection-end="4046" vertical-scroll-proportion="0.31034482" vertical-offset="1380" max-vertical-offset="2220">
+          <folding>
+            <element signature="e#687#1697#0" expanded="false" />
+            <element signature="e#863#1683#0" expanded="false" />
+            <element signature="e#2267#3552#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 
