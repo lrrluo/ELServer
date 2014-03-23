@@ -38,6 +38,10 @@ function pareseBus(body,callback){
 
     $ = cheerio.load(body);
     temp =  $(".bus_direction");
+    if(!temp.eq(0).html()){
+        callback({error:'no data'})
+        return;
+    }
     result.upRoute.name = temp.eq(0).html().replace(/\s|&nbsp/g,"");
     result.downRoute.name = temp.eq(1).html().replace(/\s|&nbsp/g,"");
     result.upRoute.route = [];

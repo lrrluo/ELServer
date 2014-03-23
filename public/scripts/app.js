@@ -17,6 +17,10 @@ angular.module('easyApp', [
             templateUrl: 'views/zhibo',
             controller: 'ZhiboCtrl'
         })
+        .when('/bus', {
+            templateUrl: 'views/bus',
+            controller: 'BusCtrl'
+        })
         .when('/online', {
             templateUrl: 'views/online.html',
             controller: 'OnlineCtrl'

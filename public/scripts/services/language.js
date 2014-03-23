@@ -6,12 +6,18 @@ angular.module('easyApp')
             req:["The required input",'这是必填项'],
             back:['Back',"返回"],
             sear : ['Search','查询'],
-            submit:['Submit',"提交记录"]
+            submit:['submit',"提交记录"]
         },
         zhibo:{
-            title : ["Sports Live Show",'体育直播表'],
-            time : ["Time",'直播时间'],
-            content : ["Match",'赛事']
+            title : ["sports live show",'体育直播表'],
+            time : ["time",'直播时间'],
+            content : ["match",'赛事']
+        },
+        bus:{
+            title : ["GuangZhou bus",'广州实时公交'],
+            busNumber : ["Amount of bus",'公交数量'],
+            errorBus : ['The Bus number is wrong,Please fill another Bus number.', '对不起，你输入的名字错误或是暂时没有数据，请重新输入.'],
+            placeholderBus : ["Please enter the bus number","请输入公交车代号"]
         },
         weather:{
             highTem: ['Highest Temperature','最高温度'],
@@ -23,6 +29,7 @@ angular.module('easyApp')
         },
         main:{
             theme:["Change Theme/Skin",'切换主题'],
+            bus:["GuangZhou RealTime bus",'广州实时公交'],
             langTitle:["Switch Language",'切换语言'],
             ch:['Chinese',"中文"],
             en:['English',"英文"],

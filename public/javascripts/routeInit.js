@@ -11,6 +11,14 @@ exports.init = function(app,routes){
     var mom = require("moment");
     var webCtrl = require('../../common/webCtrl').webCtrl;
 
+    function sendData(data,cb){
+        if(cb){
+            return cb+'('+JSON.stringify(data)+')';
+        }
+        else
+            return JSON.stringify(data);
+
+    }
 
     app.get('/', routes.index);
 
@@ -26,6 +34,9 @@ exports.init = function(app,routes){
     app.get('/views/zhibo',function(req,res){
         res.render('zhibo',{});
     })
+    app.get('/views/bus',function(req,res){
+        res.render('bus',{});
+    })
 
     app.get('/service/weather', function(req,res,next){
         var pro,city , cb;
@@ -35,25 +46,13 @@ exports.init = function(app,routes){
             console.log(city);
             pro = webCtrl.getWeather(city);
             pro.then(function(data){
-                if(cb){
-                    res.send(cb+'('+JSON.stringify(data)+')');
-                }
-                else
-                    res.send(JSON.stringify(data));
+                res.send(sendData(data,cb));
             },function(err){
-                if(cb){
-                    res.send(cb +'('+JSON.stringify({status:'error'})+')');
-                }
-                else
-                    res.send(JSON.stringify({status:'error'}));
+                res.send(sendData({status:'error'},cb));
             })
         }
         else{
-            if(cb){
-                res.send(cb+'('+JSON.stringify({error:"please specity the city name"})+')');
-            }
-            else
-                res.send(JSON.stringify({error:"please specity the city name"}));
+            res.send(sendData({error:"please specity the city name"},cb))
         }
     });
 
@@ -156,21 +155,24 @@ exports.init = function(app,routes){
         res.send("weibo service");
     });
 
+
     app.get('/service/GDbus', function(req,res,next){
-        var pro,bus;
+        var pro,bus,cb;
         bus = req.query.bus;
+        cb = req.query.callback;
         if(bus){
             console.log(bus);
             pro = webCtrl.getBus(bus);
             pro.then(function(data){
-                res.send(req.query.callback+'('+JSON.stringify(data)+')');
+                console.log(data);
+                res.send(sendData(data,cb));
             },function(err){
-                res.send(req.query.callback+'('+JSON.stringify({status:'error'})+')');
+                res.send(sendData({status:'error'},cb));
             })
         }
         else{
             console.log(req.query.city);
-            res.send(req.query.callback+'('+JSON.stringify({error:"please specity the city name"})+')');
+            res.send(sendData({error:"please specity the bus number"},req.query.callback));
         }
     });
 
