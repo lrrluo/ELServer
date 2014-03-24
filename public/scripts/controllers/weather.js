@@ -19,6 +19,7 @@ angular.module('easyApp')
                     $scope.getWeather(city);
                 });
             },0)
+            $scope.loading  = false;
             var language = Language["weather"];
             var commonLang = Language['common'];
             function init(sign){
@@ -60,6 +61,7 @@ angular.module('easyApp')
 
             $scope.getWeather = function(city){
                 if(city){
+                    $scope.loading  = true;
                     if($scope.charConfig){
                         $scope.charConfig.loading = true;
                     }
@@ -68,6 +70,7 @@ angular.module('easyApp')
                         if(!data[1]){
                             alert(language.errorCity[cookie.getLang()]);
                             $scope.city = "";
+                            $scope.loading  = false;
                             return false;
                         }
                         $scope.chartConfig = {
@@ -121,8 +124,12 @@ angular.module('easyApp')
                     $scope.chartConfig.options.xAxis.categories.push(data[6]) ;
                     $scope.chartConfig.options.xAxis.categories.push(data[13]) ;
                     $scope.chartConfig.options.xAxis.categories.push(data[18]) ;
+                   // console.log($scope.chartConfig);
+                    $scope.loading  = false;
                     //$scope.charConfig.loading = true;
-                })
+                }).error(function(){
+                            $scope.loading  = false;
+                        })
             }
             return false;
         }

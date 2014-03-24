@@ -15,6 +15,7 @@ angular.module('easyApp')
         },
         bus:{
             title : ["GuangZhou bus",'广州实时公交'],
+            totalStop : ["The total stops:",'全程公车站数为:'],
             busNumber : ["Amount of bus",'公交数量'],
             errorBus : ['The Bus number is wrong,Please fill another Bus number.', '对不起，你输入的名字错误或是暂时没有数据，请重新输入.'],
             placeholderBus : ["Please enter the bus number","请输入公交车代号"]

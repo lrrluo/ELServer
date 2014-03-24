@@ -6,11 +6,18 @@
         h2
             i.icon-edit
             span {{title}}
-    .box-content
+    .box-content(ng-hide="loading")
         .input-append
             input.span2(type='text',id='inputName', ng-model='bus',placeholder='{{phBusName}}')
             button.btn(type="button",ng-click="getBus(bus)"){{search_T}}
+        select(ng-hide="loading",ng-model="route",ng-change="switchRoute()")
+            option(value=0) 上行
+            option(value=1) 下行
         highchart(id='char1',config='chartConfig')
+    div(ng-show="loading")
+        img.ajax-loader(src="theme/img/ajax-loaders/ajax-loader-7.gif")
+
+
 
 
 
