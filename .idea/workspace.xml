@@ -23,10 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="language.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="language.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/scripts/services/language.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="9" selection-start="706" selection-end="706" vertical-scroll-proportion="0.42328042" vertical-offset="360" max-vertical-offset="2880">
+            <state line="20" column="9" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2880">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="43" selection-start="1121" selection-end="1121" vertical-scroll-proportion="-4.8" vertical-offset="810" max-vertical-offset="1500">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bus.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/bus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="56" selection-start="160" selection-end="160" vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="2610">
               <folding />
             </state>
           </provider>
@@ -88,12 +106,12 @@
         <option value="$PROJECT_DIR$/public/scripts/controllers/weather.js" />
         <option value="$PROJECT_DIR$/public/scripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/public/scripts/app.js" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/common/util.js" />
         <option value="$PROJECT_DIR$/public/javascripts/routeInit.js" />
         <option value="$PROJECT_DIR$/views/bus.jade" />
         <option value="$PROJECT_DIR$/public/scripts/services/language.js" />
         <option value="$PROJECT_DIR$/public/scripts/controllers/bus.js" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
       </list>
     </option>
   </component>
@@ -173,7 +191,61 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ELserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ELServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ELserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ELServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ELserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ELServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,13 +379,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/scripts/services/language.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="26" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/routeInit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="168" column="21" selection-start="4928" selection-end="4928" vertical-scroll-proportion="0.0" vertical-offset="4740" max-vertical-offset="5580">
@@ -364,11 +429,6 @@
         <state line="16" column="38" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1950" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="38" selection-start="1403" selection-end="1403" vertical-scroll-proportion="-13.2" vertical-offset="780" max-vertical-offset="1500" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/webCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="21" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="3060">
@@ -397,9 +457,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/services/language.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="706" selection-end="706" vertical-scroll-proportion="0.42328042" vertical-offset="360" max-vertical-offset="2880">
+        <state line="20" column="9" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="43" selection-start="1121" selection-end="1121" vertical-scroll-proportion="-4.8" vertical-offset="810" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/bus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="56" selection-start="160" selection-end="160" vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="2610">
           <folding />
         </state>
       </provider>
