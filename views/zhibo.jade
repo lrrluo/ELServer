@@ -1,0 +1,16 @@
+//
+   Created by L on 14-3-19.
+
+.box
+    .box-header.well(data-original-title)
+        h2
+            i.icon-edit
+            {{title}}
+    .box-content
+        table.table.table-striped.table-bordered.datatable
+            thead
+                tr
+                    th(ng-repeat='h in headers'){{h.colName}}
+            tbody
+                tr(ng-repeat='row in data')
+                    td(ng-repeat='h in headers'){{row[h.name]}}

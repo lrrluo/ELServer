@@ -1,0 +1,12 @@
+//
+   Created by L on 14-3-18.
+.box
+    .box-header.well(data-original-title)
+        h2
+            i.icon-edit
+            span {{title}}
+    .box-content
+        .input-append
+            input.span2(type='text',id='inputName', ng-model='city',placeholder='{{phCityName}}')
+            button.btn(type="button",ng-click="getWeather(city)"){{search_T}}
+        highchart(id='char1',config='chartConfig')
