@@ -11,6 +11,9 @@ angular.module('easyApp')
         zhibo:{
             title : ["sports live show",'体育直播表'],
             time : ["time",'直播时间'],
+            ls : ["Early Morning",'凌晨'],
+            day : ["DayTime",'白天'],
+            night : ["NightTime",'晚上'],
             content : ["match",'赛事']
         },
         bus:{

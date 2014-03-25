@@ -6,6 +6,7 @@
 var q = require("q");
 var request = require("request");
 var utils = require("../common/util");
+var moment  = require('moment');
 
 
 var mongoose = require('mongoose'),
@@ -18,6 +19,7 @@ content = new Schema({
     content: String
 });
 sportLiveSchema = new Schema({
+    logTime: String,
     time: String,
     content:[content]
 });
@@ -58,10 +60,16 @@ function SpostLiveModel(){
     }
     function find(parma,defer){
         spmodel.find(parma,function(err,data){
+            var now = new moment(),
+                logTime ;
             if(data.length >0){
-                defer.resolve(data[0]);
+                logTime = new moment(data[0]["logTime"]);
+                if(logTime.diff(now,'days') >= 0){
+                    defer.resolve(data[0]);
+                    return false;
+                }
+                console.log('leleleleleelle');
             }
-            else{
                 var url = "http://www.zhibo8.cc/";
                 request(url, function(err, resp, body) {
                     if (err)
@@ -70,6 +78,7 @@ function SpostLiveModel(){
                         var i = 0;
                         var sm;
                         for(; i < result.length; i++){
+                           result[i]["logTime"] = new moment().format("YYYY-MM-DD");
                            sm = new spmodel(result[i]);
                            sm.save();
                         }
@@ -77,7 +86,6 @@ function SpostLiveModel(){
 
                    });
                 });
-            }
         })
     }
     function slModel(){

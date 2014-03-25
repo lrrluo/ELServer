@@ -139,7 +139,11 @@ exports.init = function(app,routes){
     });
 
     app.get('/service/sportLive', function(req,res,next){
-        var time = mom().format("MM月DD日");
+        var time = new mom();
+        time.add('days',req.query.value);
+        time = time.format("MM月DD日");
+        console.log(time);
+
         var pro = sp.get({$regex : time+".*"});
         pro.then(function(data){
             if(req.query.callback){

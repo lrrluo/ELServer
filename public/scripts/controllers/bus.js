@@ -7,11 +7,15 @@ angular.module('easyApp')
     .controller('BusCtrl',
         ['$scope','$location','cookie','Language', '$http', function ($scope, $location, cookie, Language, $http) {
 
+
+
+
             var language = Language["bus"],
                 commonLang = Language['common'],
                 busData,route,
                 routeMap = ['upRoute','downRoute'];
             $scope.route = 0;
+            route = routeMap[$scope.route];
             $scope.loading  = false;
 
             $scope.chartConfig = {};
