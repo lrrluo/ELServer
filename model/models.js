@@ -58,7 +58,7 @@ function SpostLiveModel(){
        model: slModel,
        find: find
     }
-    function find(parma,defer){
+    function find(parma,value,defer){
         spmodel.find(parma,function(err,data){
             var now = new moment(),
                 logTime ;
@@ -66,9 +66,11 @@ function SpostLiveModel(){
                 logTime = new moment(data[0]["logTime"]);
                 if(logTime.diff(now,'days') >= 0){
                     defer.resolve(data[0]);
+                    spmodel.remove(function(){
+                       console.log(arguments,'empty');
+                    })
                     return false;
                 }
-                console.log('leleleleleelle');
             }
                 var url = "http://www.zhibo8.cc/";
                 request(url, function(err, resp, body) {
@@ -82,7 +84,9 @@ function SpostLiveModel(){
                            sm = new spmodel(result[i]);
                            sm.save();
                         }
-                       defer.resolve(result[0]);
+                        if(result.length > value)
+                            defer.resolve(result[value]);
+                        else defer.resolve(result[0]);
 
                    });
                 });

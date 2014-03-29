@@ -11,10 +11,10 @@ var request = require('request');
 
 
 
-function getList(time){
+function getList(time,value){
     var defer = q.defer();
     var slModel = require('../model/models').spLiveDao();
-    slModel.find({time:time},defer);
+    slModel.find({time:time},value,defer);
     return defer.promise;
 }
 

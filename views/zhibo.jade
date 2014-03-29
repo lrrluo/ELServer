@@ -11,13 +11,6 @@
             button.btn.btn-primary(ng-repeat="but in buttons",ng-class="{'btn-success': but.active}",ng-click="getZhibo(but.value)"){{but.name}}
         p
             button.btn.btn-primary(ng-repeat="but in dayButtons",ng-class="{'btn-success': but.active}",ng-click="showTime(but.value)"){{but.name}}
-
-        table.table.table-striped.table-bordered.datatable
-            thead
-                tr
-                    th(ng-repeat='h in headers'){{h.colName}}
-            tbody
-                tr(ng-repeat='row in data')
-                    td(ng-repeat='h in headers'){{row[h.name]}}
+        stable(option = 'option')
     div(ng-show="loading")
         img.ajax-loader(src="theme/img/ajax-loaders/ajax-loader-7.gif")

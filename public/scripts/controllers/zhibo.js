@@ -6,20 +6,34 @@
 
 angular.module('easyApp')
     .controller('ZhiboCtrl',
-        ['$scope','$location','cookie','Language','$http', function ($scope,$location,cookie,Language,$http) {
+        ['$scope','cookie','Language','$http', function ($scope,cookie,Language,$http) {
             var i, today = new moment();
 
             $scope.loading  = false;
+            $scope.option = {};
             var tvData = [], time =0 ,language = Language["zhibo"];
+
+
+            time = parseInt(today.format('HH'),10);
+            if( time<= 8){
+               time = 0;
+            }
+            else if(time >8 && time <= 17){
+                time = 1;
+            }
+            else time = 2;
+
             function init(sign){
                 $scope.title = language.title[sign];
-                $scope.headers = [
+                $scope.option['headers'] = [
                     {colName: language.time[sign],name:'time'},
                     {colName: language.content[sign],name:'content'}
                 ];
+
                 $scope.dayButtons[0].name = language.ls[sign];
                 $scope.dayButtons[1].name = language.day[sign];
                 $scope.dayButtons[2].name = language.night[sign];
+
             }
             $scope.buttons = [];
             $scope.dayButtons = [
@@ -28,7 +42,7 @@ angular.module('easyApp')
                 {name: language.night[cookie.getLang()],value: 2,active: false}
             ];
 
-            for(i = 0; i < 7;i++){
+            for(i = 0; i < 10;i++){
                 $scope.buttons.push({"active":false,"name": today.format("MM-DD ddd"),"value":i});
                 today.add('days',1);
             }
@@ -53,19 +67,20 @@ angular.module('easyApp')
                     })
             }
 
+            init(cookie.getLang());
             $scope.getZhibo(0);
 
             $scope.showTime = function(val){
                 time = val;
                 $scope.data = tvData[val];
-                console.log(tvData);
+                $scope.option.data = tvData[val];
+
                 for(var i =0;i<3 ;i++){
                     $scope.dayButtons[i].active = false;
                 }
                 $scope.dayButtons[val].active = true;
             }
 
-            init(cookie.getLang());
 
             $scope.$on('switchLang',function(e,index){
                 init(cookie.getLang());
@@ -86,5 +101,14 @@ angular.module('easyApp')
                         tvData[2].push(data[i]);
                     }
                 }
+                /*var j = 0,temp = [];
+
+                for(i = 0; i< 3; i++){
+                    while(tvData[i].length > 0){
+                        temp[j++] = tvData[i].splice(0,2);
+                    }
+                    tvData[i] = temp;
+                    j = 0;
+                }*/
             }
         }])

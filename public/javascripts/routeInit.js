@@ -38,6 +38,10 @@ exports.init = function(app,routes){
         res.render('bus',{});
     })
 
+    app.get('/views/staticTable',function(req,res){
+        res.render('staticTable',{});
+    })
+
     app.get('/service/weather', function(req,res,next){
         var pro,city , cb;
         city = req.query.city;
@@ -144,7 +148,8 @@ exports.init = function(app,routes){
         time = time.format("MM月DD日");
         console.log(time);
 
-        var pro = sp.get({$regex : time+".*"});
+
+        var pro = sp.get({$regex : time+".*"},req.query.value);
         pro.then(function(data){
             if(req.query.callback){
                 res.send(req.query.callback+'('+JSON.stringify(data)+')');
