@@ -37,6 +37,9 @@ exports.init = function(app,routes){
     app.get('/views/bus',function(req,res){
         res.render('bus',{});
     })
+    app.get('/views/train',function(req,res){
+        res.render('train',{});
+    })
 
     app.get('/views/staticTable',function(req,res){
         res.render('staticTable',{});
@@ -71,7 +74,21 @@ exports.init = function(app,routes){
     });
 
     app.get('/service/TV', function(req,res,next){
-        res.send("TV service");
+        var pro,city , cb;
+        city = req.query.city;
+        cb = req.query.callback;
+        if(city){
+            console.log(city);
+            pro = webCtrl.getWeather(city);
+            pro.then(function(data){
+                res.send(sendData(data,cb));
+            },function(err){
+                res.send(sendData({status:'error'},cb));
+            })
+        }
+        else{
+            res.send(sendData({error:"please specity the city name"},cb))
+        }
     });
 
     app.get('/service/airLine', function(req,res,next){

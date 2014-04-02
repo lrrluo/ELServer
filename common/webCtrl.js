@@ -17,6 +17,7 @@ function webReqCtrl(){
     return{
         getSupportCities:getCities,
         getWeather: getWeather,
+        getTv: getTv,
         getBus:getBus
     }
 
@@ -34,6 +35,24 @@ function webReqCtrl(){
     }
 
     function getWeather(city){
+        var defer = q.defer();
+        request.post({
+            headers: {'content-type' : 'application/x-www-form-urlencoded'},
+            url:     'http://www.webxml.com.cn/WebServices/WeatherWebservice.asmx/getWeatherbyCityName',
+            body:    "theCityName="+city
+        }, function(error, response, body){
+            var parser,
+                cities;
+            parser = new xml2json.Parser();
+            parser.parseString(body, function (err, result) {
+                var weather = result.ArrayOfString.string;
+                defer.resolve(weather);
+            });
+        });
+        return defer.promise;
+
+    }
+    function getTv(){
         var defer = q.defer();
         request.post({
             headers: {'content-type' : 'application/x-www-form-urlencoded'},

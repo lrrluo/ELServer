@@ -21,9 +21,9 @@ angular.module('easyApp', [
             templateUrl: 'views/bus',
             controller: 'BusCtrl'
         })
-        .when('/online', {
-            templateUrl: 'views/online.html',
-            controller: 'OnlineCtrl'
+        .when('/train', {
+            templateUrl: 'views/train',
+            controller: 'TrainCtrl'
         })
         .when('/log', {
             templateUrl: 'views/log.html',

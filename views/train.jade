@@ -1,0 +1,19 @@
+//
+   Created by L on 14-3-19.
+
+.box
+    .box-header.well(data-original-title)
+        h2
+            i.icon-edit
+            {{title}}
+    .box-content(ng-hide="loading")
+        p
+            input.span2(type='text', placeholder="{{startCity}}", ng-model="sCity")
+        .input-append
+            input.span2(type="text",placeholder="{{endCity}}", ng-model="eCity")
+            button.btn.btn-primary(type="button"){{search}}
+        p
+            button.btn.btn-primary(ng-repeat="but in buttons",ng-class="{'btn-success': but.active}",ng-click="selectTime(but.value)"){{but.name}}
+        stable(option = 'option')
+    div(ng-show="loading")
+        img.ajax-loader(src="theme/img/ajax-loaders/ajax-loader-7.gif")

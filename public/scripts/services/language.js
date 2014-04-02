@@ -8,6 +8,27 @@ angular.module('easyApp')
             sear : ['Search','查询'],
             submit:['submit',"提交记录"]
         },
+        train:{
+            title : ["Train query",'火车时刻表'],
+	        sCity : ["Start City",'请输入出发点城市'],
+	        eCity : ["End City",'请输入结束城市'],
+            no : ["Train number",'列车号'],
+            route : ["Route",'线路'],
+            time : ["Start and arrivel time",'出发与到达时间'],
+            duration : ["Duration",'经历时长'],
+            buss : ["Business site",'商务座'],
+            spec : ["Special site",'特等座'],
+            firstClass : ["First Class site",'一等座'],
+            secondClass : ["Second Class site",'二等座'],
+            highClass : ["High Class Soft sleeper",'高级软卧'],
+            softBed : ["Soft sleeper",'软卧'],
+            hardBed : ["Hard sleeper",'硬卧'],
+            softSit : ["Soft Site",'软座'],
+            hardSit : ["Hard Site",'硬座'],
+            noSit : ["No Site",'无座'],
+            other : ["Other",'其它'],
+            remark : ["Remark",'备注']
+        },
         zhibo:{
             title : ["sports live show",'体育直播表'],
             time : ["time",'直播时间'],
@@ -42,7 +63,8 @@ angular.module('easyApp')
             slate:["Slate",'黑夜'],
             func:['Function','功能'],
             weather:['Weather','天气查询'],
-            sportLive:['Sports Show','体育赛事表']
+            sportLive:['Sports Show','体育赛事表'],
+            train:['Train query','火车时刻查询表']
         },
         mapHistory:{
             title:['Path View',"轨迹显示"],

@@ -32,7 +32,8 @@ angular.module('easyApp')
             $scope.headers = [
                 {name:$scope.language.weather[sign],active:true,url:"/weather",icon:'icon-home'},
                 {name:$scope.language.sportLive[sign],active:false,url:"/zhibo",icon:'icon-picture'},
-                {name:$scope.language.bus[sign],active:false,url:"/bus",icon:'icon-picture'}
+                {name:$scope.language.bus[sign],active:false,url:"/bus",icon:'icon-picture'},
+                {name:$scope.language.train[sign],active:false,url:"/train",icon:'icon-picture'}
 /*                {name:$scope.language.online[sign],active:false,url:"/online"},
                 {name:$scope.language.userManager[sign],active:false,url:"/userManager"},
                 {name:$scope.language.log[sign],active:false,url:"/log"},
