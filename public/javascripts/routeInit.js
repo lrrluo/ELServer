@@ -20,12 +20,17 @@ exports.init = function(app,routes){
 
 	}
 
-	app.get('/', routes.index);
-
 	app.get('/service/IP', function(req,res,next){
 		console.log("IP");
 		res.send("IP service");
 	});
+
+
+	app.get('/', routes.index);
+
+	app.get('/views/dropdown',function(req,res){
+		res.render('dropdown',{});
+	})
 
 	app.get('/views/weather',function(req,res){
 		res.render('weather',{});
@@ -40,10 +45,14 @@ exports.init = function(app,routes){
 	app.get('/views/train',function(req,res){
 		res.render('train',{});
 	})
-
 	app.get('/views/staticTable',function(req,res){
 		res.render('staticTable',{});
 	})
+	app.get('/views/narbar',function(req,res){
+		console.log(req.param.name);
+		res.render("narbar",{});
+	})
+
 
 	app.get('/service/weather', function(req,res,next){
 		var pro,city , cb;

@@ -1,0 +1,47 @@
+body {
+  padding-top: 45px !important;
+  padding-left: 10px;
+}
+ul,
+li,
+ol,
+body,
+div {
+  padding: 0;
+  margin: 0;
+}
+.pdl10 {
+  padding-left: 10px;
+}
+.pdr10 {
+  padding-left: 10px;
+}
+.pdt10 {
+  padding-left: 10px;
+}
+.pdb10 {
+  padding-left: 10px;
+}
+ul {
+  list-style: none;
+}
+.D-dropdown > a {
+  background-color: red;
+  border: 1px solid #000000;
+  border-radius: 5px 5px 5px 5px;
+}
+.D-narbar {
+  background-color: #33578F;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.D-narbar-title {
+  float: left;
+  padding-top: 5px;
+}
+.D-narbar-rightItem {
+  float: right;
+  padding-top: 10px;
+}

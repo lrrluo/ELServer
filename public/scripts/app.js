@@ -1,6 +1,12 @@
 'use strict';
 
+angular.module('L.component.common',[]);
+angular.module('L.component',[
+	'L.component.common'
+])
+
 angular.module('easyApp', [
+	'L.component',
     'highcharts-ng',
 	'ui.bootstrap',
     'ngCookies',

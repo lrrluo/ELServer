@@ -1,51 +1,53 @@
 extends layout
 
 block content
-  .navbar
-    .navbar-inner
-        .container-fluid
-            a.btn.btn-navbar(data-toggle="collapse",data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse")
-                span.icon-bar
-                span.icon-bar
-                span.icon-ba
-            a.brand
-                img(src="theme/img/logo20.png")
-                span 便利系统
-            .btn-group.pull-right
-                a.btn.dropdown-toggle(data-toggle="dropdown",href="#")
-                    i.icon-tint
-                    span {{theme}}
-                    i.caret
-                ul.dropdown-menu
-                    li(ng-repeat="th in themes track by $index")
-                        a(ng-click="switchTheme($index)")
-                            i(ng-class="{'icon-ok':th.active,'icon-blank':!th.active}")
-                            {{th.name}}
-            .btn-group.pull-right
-                a.btn.dropdown-toggle(data-toggle="dropdown",href="#")
-                    i.icon-star
-                    span(ng-bind="langtitle")
-                    span.caret
-                ul.dropdown-menu
-                    li(ng-repeat="lang in langs track by $index")
-                        a(ng-click="switchLang($index)")
-                            i(ng-class="{'icon-ok':lang.active,'icon-blank':!lang.active}")
-                            {{lang.name}}
-  .container-fluid
+    narbar()
+    p ksjkfjsdkfjskdfjksdfj
+    //.navbar
+        .navbar-inner
+            .container-fluid
+                a.btn.btn-navbar(data-toggle="collapse",data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-ba
+                a.brand
+                    img(src="theme/img/logo20.png")
+                    span 便利系统
+                .btn-group.pull-right
+                    a.btn.dropdown-toggle(data-toggle="dropdown",href="#")
+                        i.icon-tint
+                        span {{theme}}
+                        i.caret
+                    ul.dropdown-menu
+                        li(ng-repeat="th in themes track by $index")
+                            a(ng-click="switchTheme($index)")
+                                i(ng-class="{'icon-ok':th.active,'icon-blank':!th.active}")
+                                {{th.name}}
+                .btn-group.pull-right
+                    a.btn.dropdown-toggle(data-toggle="dropdown",href="#")
+                        i.icon-star
+                        span(ng-bind="langtitle")
+                        span.caret
+                    ul.dropdown-menu
+                        li(ng-repeat="lang in langs track by $index")
+                            a(ng-click="switchLang($index)")
+                                i(ng-class="{'icon-ok':lang.active,'icon-blank':!lang.active}")
+                                {{lang.name}}
+    //.container-fluid
+        .row-fluid
+            ul.nav.nav-tabs
+                li(ng-class="{active:h.active}" ng-repeat="h in headers")
+                    a(ng-click="jump(h.url,$index)") {{h.name}}
+        .row-fluid(ng-view="")
+    //.container-fluid
       .row-fluid
-          ul.nav.nav-tabs
-            li(ng-class="{active:h.active}" ng-repeat="h in headers")
-                a(ng-click="jump(h.url,$index)") {{h.name}}
-      .row-fluid(ng-view="")
-  //.container-fluid
-    .row-fluid
-        .span2.main-menu-span
-            .well.nav-collapse.sidebar-nav
-                ul.nav.nav-tabs.nav-stacked.main-menu
-                    li.nav-header.hidden-tablet {{function}}
-                    li(ng-repeat='h in headers',ng-class='{active:h.active}')
-                        a.ajax-link(ng-click='jump(h.url,$index)')
-                            i(class='{{h.icon}}')
-                            span.hidden-tablet {{h.name}}
-        div(ng-view="",class="row-fluid span10")
+          .span2.main-menu-span
+              .well.nav-collapse.sidebar-nav
+                  ul.nav.nav-tabs.nav-stacked.main-menu
+                      li.nav-header.hidden-tablet {{function}}
+                      li(ng-repeat='h in headers',ng-class='{active:h.active}')
+                          a.ajax-link(ng-click='jump(h.url,$index)')
+                              i(class='{{h.icon}}')
+                              span.hidden-tablet {{h.name}}
+          div(ng-view="",class="row-fluid span10")
 

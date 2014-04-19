@@ -1,20 +1,24 @@
 {
-"name": "EasyApp",
-"version": "0.0.1",
-"private": true,
-"scripts": {
-"start": "node app.js"
-},
-"dependencies": {
-"moment": "*",
-"mongoose":"*",
-"express": "3.4.7",
-"request":"*",
-"cheerio":"*",
-"xmlparser":"*",
-"xml2js":"*",
-"mongodb":"*",
-"q":"*",
-"jade": "*"
-}
+	"name": "EasyApp",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"grunt": "~0.4.1",
+		"grunt-contrib-less": "~0.5.0",
+		"grunt-contrib-watch": "~0.4.0",
+		"grunt-contrib-jshint": "*",
+		"moment": "*",
+		"mongoose":"*",
+		"express": "3.4.7",
+		"request":"*",
+		"cheerio":"*",
+		"xmlparser":"*",
+		"xml2js":"*",
+		"mongodb":"*",
+		"q":"*",
+		"jade": "*"
+	}
 }

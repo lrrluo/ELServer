@@ -29,18 +29,18 @@ var port = isDev ? '27017' : '8908';
 var database = isDev ? 'ELServer' : 'kKhieeXSEakwztiLdGFH';
 
 console.log("@@@@@@@@@@@@@@@@open@@@@@@@@@@@@@@@@@@@@@@@@@");
-db.open(host, database, port, options);
-db.on('error', function (err) {
-	//logger.error("connect error :" + err);
-	//监听BAE mongodb异常后关闭闲置连接
-	console.log("@@@@@@@@@@@@@@@@@@@@@@@@errrorconnect close retry connect ");
-	db.close();
-});
-//监听db close event并重新连接
-db.on('close', function () {
-	console.log("@@@@@@@@@@@@@@@@connect close retry connect ");
-	db.open(host, database, port, options);
-});
+//db.open(host, database, port, options);
+//db.on('error', function (err) {
+//	//logger.error("connect error :" + err);
+//	//监听BAE mongodb异常后关闭闲置连接
+//	console.log("@@@@@@@@@@@@@@@@@@@@@@@@errrorconnect close retry connect ");
+//	db.close();
+//});
+////监听db close event并重新连接
+//db.on('close', function () {
+//	console.log("@@@@@@@@@@@@@@@@connect close retry connect ");
+//	db.open(host, database, port, options);
+//});
 
 Schema = mongoose.Schema;
 content = new Schema({

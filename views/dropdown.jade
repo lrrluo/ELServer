@@ -1,0 +1,13 @@
+//
+   Created by L on 14-4-19.
+a(ng-click='click($event)')
+    i(class='{{icon}}')
+    span.name(ng-bind='name')
+    span.fa-caret-down.caret
+ul.D-dropdown-menu(ng-show='isShow')
+    li(ng-repeat='li in items track by $index')
+        a(ng-click='switch($index)')
+            i(ng-class="{'fa-check':li.active,'icon-blank':!li.active}")
+            {{li.name}}
+
+
