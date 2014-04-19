@@ -1,12 +1,14 @@
 doctype html
 html(ng-app='easyApp',id='easyApp',ng-controller="MainCtrl")
   head
-    title= title
+    title L的EasyApp
     meta(name="viewport",content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet",href="theme/css/bootstrap-{{skin}}.css")
     link(href="/theme/css/bootstrap-responsive.css", rel="stylesheet")
     link(href="/theme/css/charisma-app.css", rel="stylesheet")
     link(href="/theme/css/jquery-ui-1.8.21.custom.css", rel="stylesheet")
+    link(href="/favicon.ico" ,rel="shortcut icon")
+    link(href="../favicon.ico" ,rel="icon")
     style.
         body{
             padding-bottom: 40px;
@@ -35,11 +37,13 @@ html(ng-app='easyApp',id='easyApp',ng-controller="MainCtrl")
     script(src='/bower_components/angular-cookies/angular-cookies.js')
     script(src='/bower_components/angular-sanitize/angular-sanitize.js')
     script(src='/bower_components/angular-route/angular-route.js')
+    script(src="scripts/directives/ui-bootstrap-tpls-0.8.0.min.js")
     script(src="scripts/app.js")
     script(src="scripts/controllers/main.js")
     script(src="scripts/services/cookie.js")
+    script(src="scripts/services/stationName.js")
     script(src="scripts/directives/highcharts-ng.js")
-    script(src="scripts/services/Language.js")
+    script(src="scripts/services/language.js")
     script(src="scripts/controllers/weather.js")
     script(src="scripts/directives/staticTable.js")
     script(src="scripts/controllers/zhibo.js")
@@ -52,4 +56,3 @@ html(ng-app='easyApp',id='easyApp',ng-controller="MainCtrl")
     script(src="/theme/js/bootstrap-dropdown.js")
     script(src="/theme/js/bootstrap-tab.js")
     script(type="text/javascript", src="http://api.map.baidu.com/api?v=2.0&ak=yar0imZX2EI1B7gdB62VfBj0")
-

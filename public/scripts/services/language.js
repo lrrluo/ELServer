@@ -10,8 +10,11 @@ angular.module('easyApp')
         },
         train:{
             title : ["Train query",'火车时刻表'],
+	        buyTick : ["Go to buy",'购买车票'],
+	        des_error : ["Please fill the start city or target city",'请填上出发城市或目标城市'],
+	        time_error : ["Pleae fill the date",'请选择相应的出发日期'],
 	        sCity : ["Start City",'请输入出发点城市'],
-	        eCity : ["End City",'请输入结束城市'],
+	        eCity : ["Target City",'请输入结束城市'],
             no : ["Train number",'列车号'],
             route : ["Route",'线路'],
             time : ["Start and arrivel time",'出发与到达时间'],
@@ -35,6 +38,7 @@ angular.module('easyApp')
             ls : ["Early Morning",'凌晨'],
             day : ["DayTime",'白天'],
             night : ["NightTime",'晚上'],
+	        address : ["Live Address",'直播地址'],
             content : ["match",'赛事']
         },
         bus:{

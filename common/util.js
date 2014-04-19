@@ -76,22 +76,26 @@ function pareseBus(body,callback){
 
 
 function parseHtml(body,callback){
-    var result = [];
-    var record = [];
-    var date;
-    var timePattern = /\d{2}:\d{2}/;
-    var sportNamePattern = /\s[\s\S]+?<a/;
+    var result = [], headUrl = "http://www.zhibo8.cc",
+        record = [],date,
+	    timePattern = /\d{2}:\d{2}/,
+        sportNamePattern = /\s[\s\S]+?<a/,
+		addressPattern = /\/zhibo[\s\S]+?htm/,
 //var livePattern = /<a(\s\S)+?<\/a>/;
-    var objTime;
-    var objContent = new String();
-    var objLive ;
-    $ = cheerio.load(body);
+        objTime, objContent = new String(),
+        objLive ,objAddress ,
+	    $ = cheerio.load(body);
     $("#left div.box").each(function(i,v){
         date =  this.find(".titlebar h2").html()
         result = [];
         this.find("ul li").each(function(){
             //下面是搜索出时间的正则
             objTime = timePattern.exec(this.html());
+	        objAddress = addressPattern.exec(this.html());
+	        if(objAddress){
+		        objAddress = headUrl + objAddress.toString();
+	        }
+
 
             //下面是搜索出节目名称的
             if(this.html().search(/<b>/) > 0){//has <b>
@@ -116,7 +120,9 @@ function parseHtml(body,callback){
             //console.log(tem.replace(/<a[\s\S]+?>]/,""));
             objLive = livePattern.exec(this.html());
             //console.log(objLive);
-            result.push({time:objTime.toString(),content:objContent.toString()})
+	        if(objTime && objContent){
+		        result.push({time:objTime.toString(),content:objContent.toString(),address:objAddress})
+	        }
             //console.log(this.html());
         });
         record.push({time:date,content:result})

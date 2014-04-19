@@ -5,15 +5,17 @@
     .box-header.well(data-original-title)
         h2
             i.icon-edit
-            {{title}}
+            span {{title}}
     .box-content(ng-hide="loading")
         p
-            input.span2(type='text', placeholder="{{startCity}}", ng-model="sCity")
+            input.span2(type='text', placeholder="{{startCity}}", ng-model="sCity",typeahead="state for state in states | filter:$viewValue | limitTo:8")
         .input-append
             input.span2(type="text",placeholder="{{endCity}}", ng-model="eCity")
-            button.btn.btn-primary(type="button"){{search}}
+            button.btn.btn-primary(type="button",ng-click="getTrain()") {{search}}
         p
             button.btn.btn-primary(ng-repeat="but in buttons",ng-class="{'btn-success': but.active}",ng-click="selectTime(but.value)"){{but.name}}
+        p
+            a.btn-large.btn-success(href="https://kyfw.12306.cn/otn/leftTicket/init",target="_blank") {{buyTicket}}
         stable(option = 'option')
     div(ng-show="loading")
         img.ajax-loader(src="theme/img/ajax-loaders/ajax-loader-7.gif")

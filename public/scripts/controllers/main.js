@@ -26,7 +26,7 @@ angular.module('easyApp')
 
             $scope.langs[sign].active = true;
             $scope.themes[cookie.getTheme()].active = true;
-            $scope.skin = $scope.themes[cookie.getTheme()].skin; //+'.css';
+            $scope.skin = $scope.themes[cookie.getTheme()].skin.toLowerCase(); //+'.css';
 
 
             $scope.headers = [
@@ -82,7 +82,7 @@ angular.module('easyApp')
                     $scope.themes[i].active = false;
                 }
                 $scope.themes[index].active = true;
-                $scope.skin = $scope.themes[index].skin; //+'.css';
+                $scope.skin = $scope.themes[index].skin.toLowerCase(); //+'.css';
                 cookie.setTheme(index);
             }
         }

@@ -12,7 +12,36 @@ var moment  = require('moment');
 var mongoose = require('mongoose'),
     Schema,content,sportLiveSchema ;
 
-mongoose.connect('mongodb://localhost/ELServer');
+var options = {
+	db: { native_parser: true },
+	server: { poolSize: 5 },
+	user: 'lrrluo@qq.com',
+	pass: 'lrr123456'
+}
+//mongoose.connect('mongodb://mongo.duapp.com/kKhieeXSEakwztiLdGFH:8908',options);
+//mongoose.connect("mongodb://mongo.duapp.com:8908/kKhieeXSEakwztiLdGFH",options);
+
+var db = exports.Db = mongoose.createConnection();
+
+var isDev = false;
+var host = isDev ? 'localhost' : 'mongo.duapp.com';
+var port = isDev ? '27017' : '8908';
+var database = isDev ? 'ELServer' : 'kKhieeXSEakwztiLdGFH';
+
+console.log("@@@@@@@@@@@@@@@@open@@@@@@@@@@@@@@@@@@@@@@@@@");
+db.open(host, database, port, options);
+db.on('error', function (err) {
+	//logger.error("connect error :" + err);
+	//监听BAE mongodb异常后关闭闲置连接
+	console.log("@@@@@@@@@@@@@@@@@@@@@@@@errrorconnect close retry connect ");
+	db.close();
+});
+//监听db close event并重新连接
+db.on('close', function () {
+	console.log("@@@@@@@@@@@@@@@@connect close retry connect ");
+	db.open(host, database, port, options);
+});
+
 Schema = mongoose.Schema;
 content = new Schema({
     time: String,

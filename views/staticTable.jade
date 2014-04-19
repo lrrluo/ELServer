@@ -3,11 +3,12 @@
 table.table.table-striped.table-bordered.datatable
     thead
         tr
-            th(ng-repeat='h in option.headers'){{h.colName}}
+            th(ng-repeat='h in option.headers') {{h.colName}}
     tbody
         tr(ng-repeat='row in data')
             td(ng-repeat='h in option.headers')
-                span.label.label-success(ng-class="{'label-success':$index == 90}"){{row[h.name]}}
+                span.label.label-success(ng-if="h.type == 0",ng-class="{'label-success':$index == 90}") {{row[h.name]}}
+                a(ng-if="h.type == 1",href="{{row[h.name]}}",target="a_blank") GO
 .row-fluid
     .span12
         .dataTables_info 第{{tableConfig.pageNow}}页 共{{tableConfig.totalPage}}页 共{{tableConfig.total}}记录

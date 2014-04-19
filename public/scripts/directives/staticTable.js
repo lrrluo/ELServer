@@ -48,10 +48,12 @@ angular.module('easyApp')
                             $scope.tableConfig.pageNow = 1;
                             break;
                         case 'pre':
-                            $scope.tableConfig.pageNow--;
+	                        if($scope.tableConfig.pageNow != 1)
+                                $scope.tableConfig.pageNow--;
                             break;
                         case 'next':
-                            $scope.tableConfig.pageNow++;
+	                        if($scope.tableConfig.pageNow != $scope.tableConfig.totalPage)
+                                $scope.tableConfig.pageNow++;
                             break;
                         case 'last':
                             $scope.tableConfig.pageNow = $scope.tableConfig.totalPage;

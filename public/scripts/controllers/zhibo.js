@@ -7,7 +7,8 @@
 angular.module('easyApp')
     .controller('ZhiboCtrl',
         ['$scope','cookie','Language','$http', function ($scope,cookie,Language,$http) {
-            var i, today = new moment();
+            var i,count = 11,//查询的天数
+	            today = new moment();
 
             $scope.loading  = false;
             $scope.option = {};
@@ -26,8 +27,9 @@ angular.module('easyApp')
             function init(sign){
                 $scope.title = language.title[sign];
                 $scope.option['headers'] = [
-                    {colName: language.time[sign],name:'time'},
-                    {colName: language.content[sign],name:'content'}
+                    {type:0,colName: language.time[sign],name:'time'},
+                    {type:0,colName: language.content[sign],name:'content'},
+	                {type:1,colName: language.address[sign],name:'address'}
                 ];
 
                 $scope.dayButtons[0].name = language.ls[sign];
@@ -42,7 +44,7 @@ angular.module('easyApp')
                 {name: language.night[cookie.getLang()],value: 2,active: false}
             ];
 
-            for(i = 0; i < 10;i++){
+            for(i = 0; i < count;i++){
                 $scope.buttons.push({"active":false,"name": today.format("MM-DD ddd"),"value":i});
                 today.add('days',1);
             }
@@ -57,7 +59,7 @@ angular.module('easyApp')
                     parseTime(data.content);
                     console.log(data);
                     $scope.loading  = false;
-                    for(i =0 ;i<7 ; i++){
+                    for(i =0 ;i<count ; i++){
                         $scope.buttons[i].active = false;
                     }
                     $scope.buttons[val].active = true;

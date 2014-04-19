@@ -32,6 +32,12 @@ block content
                             i(ng-class="{'icon-ok':lang.active,'icon-blank':!lang.active}")
                             {{lang.name}}
   .container-fluid
+      .row-fluid
+          ul.nav.nav-tabs
+            li(ng-class="{active:h.active}" ng-repeat="h in headers")
+                a(ng-click="jump(h.url,$index)") {{h.name}}
+      .row-fluid(ng-view="")
+  //.container-fluid
     .row-fluid
         .span2.main-menu-span
             .well.nav-collapse.sidebar-nav

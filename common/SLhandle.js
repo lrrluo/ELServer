@@ -7,14 +7,49 @@ var fs = require('fs');
 var q = require('q');
 var cheerio = require('cheerio');
 var request = require('request');
+var utils = require('./util');
+var moment = require('moment');
 
 
+function find(defer){
+	var url = "http://www.zhibo8.cc/";
+	request(url, function(err, resp, body) {
+		if (err)
+			throw err;
+		utils.parseHtml(body,function(result){
+			var i = 0;
+			for(; i < result.length; i++){
+				result[i]["logTime"] = new moment().format("YYYY-MM-DD");
+				//sm = new spmodel(result[i]);
+				//sm.save();
+			}
+			defer.resolve(result);
+			//if(result.length > value)
+			//	defer.resolve(result[value]);
+			//else defer.resolve(result[0]);
+
+		});
+	});
+	/*spmodel.find(parma,function(err,data){
+		var now = new moment(),
+			logTime ;
+		if(data.length >0){
+			logTime = new moment(data[0]["logTime"]);
+			if(logTime.diff(now,'days') >= 0){
+				defer.resolve(data[0]);
+				spmodel.remove(function(){
+					console.log(arguments,'empty');
+				})
+				return false;
+			}
+		}
+	})*/
+}
 
 
-function getList(time,value){
+function getList(){
     var defer = q.defer();
-    var slModel = require('../model/models').spLiveDao();
-    slModel.find({time:time},value,defer);
+	find(defer)
     return defer.promise;
 }
 

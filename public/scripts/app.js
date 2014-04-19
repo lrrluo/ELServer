@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('easyApp', [
-  'highcharts-ng',
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute'
+    'highcharts-ng',
+	'ui.bootstrap',
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ngRoute'
 ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
