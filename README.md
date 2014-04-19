@@ -8,3 +8,5 @@ angular + nodejs+ express +mongoose 基于上面几个技术来开发一个方�
 现在这一部分是后端的部分，是基于nodejs + express + mongoose 来开发。
 
 现在重新在server 这边加了一个 webapp(ng+bt)基于jade 模块来开发，这样就不用jsonp的方式，做完这个以后可能会加个手机端。
+
+现在这个项目 已经发布在百度云上了,rirong.duapp.com
