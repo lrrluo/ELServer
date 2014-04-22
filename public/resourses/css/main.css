@@ -25,23 +25,61 @@ div {
 ul {
   list-style: none;
 }
+.D-dropdown {
+  float: right;
+  padding: 5px 10px 5px 0;
+}
 .D-dropdown > a {
   background-color: red;
   border: 1px solid #000000;
-  border-radius: 5px 5px 5px 5px;
+  line-height: 18px;
+  border-radius: 4px 4px 4px 4px;
 }
 .D-narbar {
-  background-color: #33578F;
-  height: 45px;
+  padding: 15px 0;
+  background: #000000;
+  height: 40px;
   position: absolute;
   top: 0;
   width: 100%;
 }
-.D-narbar-title {
-  float: left;
-  padding-top: 5px;
+.D-narbarCenter {
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.D-narbar-rightItem {
+.D-narbarCenter div.title {
+  float: left;
+  padding: 0 30px;
+}
+.D-narbarCenter-rightItem {
   float: right;
   padding-top: 10px;
+}
+.D-nav {
+  overflow: auto;
+  float: left;
+}
+.D-nav > li {
+  float: left;
+  margin-left: 20px;
+}
+.D-nav > li > a {
+  border-radius: 3px !important;
+  color: #98a8a8;
+  font-size: 15px;
+  display: block;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  font-family: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.D-nav > li > a.active {
+  background: #1d8acb;
+  color: azure;
+}
+.D-nav > li > a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: azure;
 }

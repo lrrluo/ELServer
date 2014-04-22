@@ -57,7 +57,11 @@ angular.module('easyApp')
             errorCity : ['The City name is wrong,Please fill another city name.', '输入的城市或省名字错误，请重新输入.']
         },
         main:{
-            theme:["Change Theme/Skin",'切换主题'],
+	        index:['Index','功能列表']
+	        ,aboutMe:['About Me','关于我们']
+	        ,advice:['Give Advice','给建议']
+	        ,login:['Login','登录']
+            ,theme:["Change Theme/Skin",'切换主题'],
             bus:["GuangZhou RealTime bus",'广州实时公交'],
             langTitle:["Switch Language",'切换语言'],
             ch:['Chinese',"中文"],

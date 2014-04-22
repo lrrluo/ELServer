@@ -1,42 +1,31 @@
 /**
- * Created by L on 14-4-19.
+ * Created by L on 14-4-22.
  */
 'use strict';
 
 angular.module('L.component.common')
-	.directive('dropdown',['$http','cookie','Language',function ($http,$cookie,Language) {
+	.directive('nav',['$http','cookie','Language',function ($http,$cookie,Language) {
 		return {
-			templateUrl:"/views/dropdown",
+			templateUrl:"/views/nav",
 			restrict: 'AE',
 			scope:{
 				//option: '='
 			},
 			link: function postLink($scope, element, attrs) {
 
-				var sign = 0
+				var sign = 1
 					,language = Language["main"];
 
-				$scope.title = '切换语言';
-				$scope.isShow = false;
-
-				$scope.icon = 'fa-bell';
-				$scope.name = '切换茳江'
-
-
 				$scope.items = [
-					{name:language.cerulean[sign],active:true,skin:language.cerulean[0]},
-					{name:language.classic[sign],active:false,skin:language.classic[0]},
-					{name:language.slate[sign],active:false,skin:language.slate[0]}
+					{name:language.index[sign],active:true}
+					,{name:language.login[sign],active:false}
+					,{name:language.advice[sign],active:false}
+					,{name:language.aboutMe[sign],active:false}
 				];
 
-				$scope.click = function(e){
-					e.stopPropagation();
-					$scope.isShow = true;
-				}
 
 				$scope.switch = function(index){
 					var i;
-					$scope.isShow = false;
 					if($scope.items[index].active){
 						return false;
 					}
