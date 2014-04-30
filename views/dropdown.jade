@@ -1,12 +1,12 @@
 //
    Created by L on 14-4-19.
-.uk-button-dropdown.uk-open
+.uk-button-dropdown.uk-open(ng-click = 'allClick($event)')
     button.uk-button.uk-button-success(ng-click='click($event)') {{title}}
         i.uk-icon-caret-down
     .uk-dropdown(ng-show='isShow')
         ul.uk-nav.uk-nav-dropdown
             li(ng-repeat='li in items track by $index')
-                a(ng-click='switch($index)')
+                a(ng-click='switch($event,$index)')
                     i(ng-class="{'uk-icon-check':li.active,'uk-icon-blank':!li.active}")
                     {{li.name}}
 

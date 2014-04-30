@@ -5,7 +5,6 @@
     .D-narbarCenter
         .title
             img(src='resourses/img/favicon.ico')
-        nav()
-        dropdown.D-dropdown
-        dropdown.D-dropdown
+        nav(option='option.menu')
+        dropdown.D-dropdown(ng-repeat = "dp in option.dropdown",option="dp")
 

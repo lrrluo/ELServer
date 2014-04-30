@@ -10,10 +10,9 @@ angular.module('L.component.common')
 			templateUrl:"/views/narbar",
 			restrict: 'AE',
 			scope:{
-				//option: '='
+				option: '='
 			},
 			link: function postLink($scope, element, attrs) {
-				$scope.title = "what happen";
 
 			}
 		};

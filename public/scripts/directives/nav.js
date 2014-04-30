@@ -9,14 +9,14 @@ angular.module('L.component.common')
 			templateUrl:"/views/nav",
 			restrict: 'AE',
 			scope:{
-				//option: '='
+				option: '='
 			},
 			link: function postLink($scope, element, attrs) {
 
 				var sign = 1
 					,language = Language["main"];
 
-				$scope.items = [
+				$scope.items = $scope.option ? $scope.option.items:[
 					{name:language.index[sign],active:true}
 					,{name:language.login[sign],active:false}
 					,{name:language.advice[sign],active:false}
@@ -36,7 +36,10 @@ angular.module('L.component.common')
 						$scope.items[index].active = true;
 						//cookie.setLang(index);
 						//init(cookie.getLang());
-						//$scope.$broadcast("switchLang",index);
+						$scope.$emit("menu",{
+							name: $scope.option.name
+							,param: $scope.items[index]
+						});
 					}
 				}
 

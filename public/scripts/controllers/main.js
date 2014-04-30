@@ -1,9 +1,43 @@
 'use strict';
 
 angular.module('easyApp')
-  .controller('MainCtrl', ['$scope','$location','cookie','Language', function ($scope,$location,cookie,Language) {
+  .controller('MainCtrl', ['$scope','$location','cookie','Language', '$document', function ($scope,$location,cookie,Language,$document) {
 
-        $scope.language = Language["main"];
+        var language = Language["main"]
+			,sign = 1;
+
+
+		$scope.option = {
+			menu:{
+				name: 'topMenu',
+				items:[
+					 {url:'/action',name:language.index[sign],active:true}
+					,{url:'/login',name:language.login[sign],active:false}
+					,{url:'/advice',name:language.advice[sign],active:false}
+					,{url:'/about',name:language.aboutMe[sign],active:false}
+				]
+
+			},
+			dropdown: [
+				{
+					name:'theme',
+					title: language.theme[sign],
+					items:[
+						{name:language.cerulean[sign],active:true,skin:language.cerulean[0]},
+						{name:language.classic[sign],active:false,skin:language.classic[0]},
+						{name:language.slate[sign],active:false,skin:language.slate[0]}
+					]
+				},
+				{
+					name: 'lang',
+					title: language.langTitle[sign],
+					items: [
+						{name:language.en[sign],active:true},
+						{name:language.ch[sign],active:false}
+					]
+				}
+			]
+		};
 
         function init(sign){
             var i, path, findUrl = false;
@@ -54,56 +88,83 @@ angular.module('easyApp')
             }
         }
 
-        init(cookie.getLang());
+        //init(0);
 
-        $scope.switchLang = function(index){
-            var i;
-            if($scope.langs[index].active){
-                return false;
-            }
-            else{
-                for(i = 0; i<$scope.langs.length; i++){
-                    $scope.langs[i].active = false;
-                }
-                $scope.langs[index].active = true;
-                cookie.setLang(index);
-                init(cookie.getLang());
-                $scope.$broadcast("switchLang",index);
-            }
-        }
+        //$scope.switchLang = function(index){
+        //    var i;
+        //    if($scope.langs[index].active){
+        //        return false;
+        //    }
+        //    else{
+        //        for(i = 0; i<$scope.langs.length; i++){
+        //            $scope.langs[i].active = false;
+        //        }
+        //        $scope.langs[index].active = true;
+        //        cookie.setLang(index);
+        //        init(cookie.getLang());
+        //        $scope.$broadcast("switchLang",index);
+        //    }
+        //}
 
-        $scope.switchTheme = function(index){
-            var i;
-            if($scope.themes[index].active){
-                return false;
-            }
-            else{
-                for(i = 0; i<$scope.themes.length; i++){
-                    $scope.themes[i].active = false;
-                }
-                $scope.themes[index].active = true;
-                $scope.skin = $scope.themes[index].skin.toLowerCase(); //+'.css';
-                cookie.setTheme(index);
-            }
-        }
+        //$scope.switchTheme = function(index){
+        //    var i;
+        //    if($scope.themes[index].active){
+        //        return false;
+        //    }
+        //    else{
+        //        for(i = 0; i<$scope.themes.length; i++){
+        //            $scope.themes[i].active = false;
+        //        }
+        //        $scope.themes[index].active = true;
+        //        $scope.skin = $scope.themes[index].skin.toLowerCase(); //+'.css';
+        //        cookie.setTheme(index);
+        //    }
+        //}
 
-        $scope.jump = function(url,index){
-            var i;
-            for(i = 0; i<$scope.headers.length; i++){
-                $scope.headers[i].active = false;
-            }
-            $scope.headers[index].active = true;
-            $location.path($scope.headers[index].url);
-        }
+        //$scope.jump = function(url,index){
+        //    var i;
+        //    for(i = 0; i<$scope.headers.length; i++){
+        //        $scope.headers[i].active = false;
+        //    }
+        //    $scope.headers[index].active = true;
+        //    $location.path($scope.headers[index].url);
+        //}
+
+		$scope.$on('dropdown',function(e, p){
+			console.log(e,p);
+			switch (p.name){
+				case 'lang':
+					console.log(p.param);
+					break;
+				case 'theme':
+					console.log(p.param);
+					break;
+			}
+		});
+
+		$scope.$on('menu',function(e, p){
+			console.log(e,p);
+			switch (p.name){
+				case 'topMenu':
+					console.log(p.param);
+					break;
+			}
+		});
 
 
-        $scope.$on("$locationChangeSuccess",function(e,path){
-            var i = 0;
-            for(i; i < $scope.headers.length ; i++){
-                $scope.headers[i].active = false;
-                if(path.indexOf($scope.headers[i].url) >= 0){
-                    $scope.headers[i].active = true;
-                }
-            }
-        })
+		// 全局 click 事件，body
+		$document.on('click', function(e){
+			$scope.$broadcast('click',e);
+		});
+
+
+        //$scope.$on("$locationChangeSuccess",function(e,path){
+        //    var i = 0;
+        //    for(i; i < $scope.headers.length ; i++){
+        //        $scope.headers[i].active = false;
+        //        if(path.indexOf($scope.headers[i].url) >= 0){
+        //            $scope.headers[i].active = true;
+        //        }
+        //    }
+        //})
   }]);
