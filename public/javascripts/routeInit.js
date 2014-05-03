@@ -27,6 +27,9 @@ exports.init = function(app,routes){
 
 
 	app.get('/', routes.index);
+	app.get('/views/service',function(req,res){
+		res.render('service',{});
+	})
 	app.get('/views/nav',function(req,res){
 		res.render('nav',{});
 	})

@@ -26,25 +26,7 @@
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="16" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1770">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/main.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="16" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="450">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="narbar.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/d/narbar.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="15" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="660">
+            <state line="3" column="26" selection-start="56" selection-end="56" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="1770">
               <folding />
             </state>
           </provider>
@@ -53,43 +35,52 @@
       <file leaf-file-name="common.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/common.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1080">
+            <state line="1" column="9" selection-start="15" selection-end="15" vertical-scroll-proportion="-0.5084746" vertical-offset="0" max-vertical-offset="1050">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropdown.less" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/less/d/dropdown.less">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="34" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="990">
+            <state line="24" column="38" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="2580">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/resourses/css/main.css">
+      <file leaf-file-name="weather.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/weather.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="3" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1590">
+            <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropdown.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/directives/dropdown.js">
+      <file leaf-file-name="service.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/service.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="41" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1800">
+            <state line="4" column="11" selection-start="71" selection-end="71" vertical-scroll-proportion="0.2251407" vertical-offset="0" max-vertical-offset="533">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropdown.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/dropdown.jade">
+      <file leaf-file-name="nav.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/nav.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="570">
+            <state line="4" column="32" selection-start="122" selection-end="122" vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="72" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="5280">
               <folding />
             </state>
           </provider>
@@ -98,7 +89,16 @@
       <file leaf-file-name="routeInit.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/routeInit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="34" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="7650">
+            <state line="31" column="5" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="7830">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="43" selection-start="1347" selection-end="1347" vertical-scroll-proportion="-10.8" vertical-offset="720" max-vertical-offset="1830">
               <folding />
             </state>
           </provider>
@@ -107,7 +107,7 @@
       <file leaf-file-name="narbar.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/narbar.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="23" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="420">
+            <state line="7" column="32" selection-start="158" selection-end="158" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -123,22 +123,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/model/models.js" />
-        <option value="$PROJECT_DIR$/public/scripts/directives/narbar.js" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/public/javascripts/routeInit.js" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/less/layout/layout.less" />
         <option value="$PROJECT_DIR$/less/main.less" />
         <option value="$PROJECT_DIR$/less/d/narbar.less" />
         <option value="$PROJECT_DIR$/views/dropdown.jade" />
-        <option value="$PROJECT_DIR$/less/common.less" />
         <option value="$PROJECT_DIR$/public/scripts/directives/dropdown.js" />
         <option value="$PROJECT_DIR$/views/narbar.jade" />
         <option value="$PROJECT_DIR$/less/d/dropdown.less" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/main.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/routeInit.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/views/nav.jade" />
+        <option value="$PROJECT_DIR$/less/common.less" />
+        <option value="$PROJECT_DIR$/public/scripts/app.js" />
+        <option value="$PROJECT_DIR$/views/weather.jade" />
+        <option value="$PROJECT_DIR$/views/service.jade" />
       </list>
     </option>
   </component>
@@ -190,7 +190,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -287,46 +286,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resourses" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ELserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ELServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resourses" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ELserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ELServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="less" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -383,6 +342,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -392,8 +352,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../appidss3ehe0h42" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -411,14 +371,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -427,6 +379,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -517,50 +477,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/staticTable.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="45" selection-start="148" selection-end="148" vertical-scroll-proportion="0.27027026" vertical-offset="0" max-vertical-offset="960" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="190" selection-end="190" vertical-scroll-proportion="-0.0" vertical-offset="120" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="46" selection-start="1538" selection-end="1538" vertical-scroll-proportion="-15.6" vertical-offset="720" max-vertical-offset="1770" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/directives/narbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="60" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="780" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="2536" selection-end="2536" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="3450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/routeInit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="34" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="7650">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/layout/layout.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="478" selection-end="478" vertical-scroll-proportion="-0.0" vertical-offset="450" max-vertical-offset="1770">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/main.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="16" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="450">
@@ -568,51 +484,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/d/narbar.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="15" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/resourses/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="3" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1590">
+        <state line="28" column="3" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2730">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/directives/dropdown.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="41" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/common.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/narbar.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/dropdown.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="570">
+        <state line="23" column="32" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="2760">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less/d/dropdown.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="990">
+        <state line="5" column="24" selection-start="113" selection-end="113" vertical-scroll-proportion="-0.0" vertical-offset="150" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/d/narbar.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="11" selection-start="110" selection-end="110" vertical-scroll-proportion="-0.0" vertical-offset="150" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/dropdown.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="18" selection-start="49" selection-end="49" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="72" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="5280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/routeInit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="5" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="7830">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/nav.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="32" selection-start="122" selection-end="122" vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/common.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="15" selection-end="15" vertical-scroll-proportion="-0.5084746" vertical-offset="0" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="38" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="2580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="1347" selection-end="1347" vertical-scroll-proportion="-10.8" vertical-offset="720" max-vertical-offset="1830">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="56" selection-end="56" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="1770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/weather.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/narbar.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="32" selection-start="158" selection-end="158" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/service.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="71" selection-end="71" vertical-scroll-proportion="0.2251407" vertical-offset="0" max-vertical-offset="533">
           <folding />
         </state>
       </provider>

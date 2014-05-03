@@ -11,10 +11,10 @@ angular.module('easyApp')
 			menu:{
 				name: 'topMenu',
 				items:[
-					 {url:'/action',name:language.index[sign],active:true}
-					,{url:'/login',name:language.login[sign],active:false}
-					,{url:'/advice',name:language.advice[sign],active:false}
-					,{url:'/about',name:language.aboutMe[sign],active:false}
+					 {url:'service',name:language.index[sign],active:true}
+					,{url:'login',name:language.login[sign],active:false}
+					,{url:'advice',name:language.advice[sign],active:false}
+					,{url:'about',name:language.aboutMe[sign],active:false}
 				]
 
 			},
