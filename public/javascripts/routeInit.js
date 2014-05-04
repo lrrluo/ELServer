@@ -30,9 +30,11 @@ exports.init = function(app,routes){
 	app.get('/views/service',function(req,res){
 		res.render('service',{});
 	})
+
 	app.get('/views/nav',function(req,res){
 		res.render('nav',{});
 	})
+
 
 	app.get('/views/dropdown',function(req,res){
 		res.render('dropdown',{});

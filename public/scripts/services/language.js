@@ -6,6 +6,7 @@ angular.module('easyApp')
             req:["The required input",'这是必填项'],
             back:['Back',"返回"],
             sear : ['Search','查询'],
+			reflesh : ['Reflesh','刷新'],
             submit:['submit',"提交记录"]
         },
         train:{
@@ -56,6 +57,13 @@ angular.module('easyApp')
             cityName : ['City Name:', '城市名称'],
             errorCity : ['The City name is wrong,Please fill another city name.', '输入的城市或省名字错误，请重新输入.']
         },
+		service:{
+			bus:["GuangZhou RealTime bus",'广州实时公交'],
+			func:['Function','功能'],
+			weather:['Weather','天气查询'],
+			sportLive:['Sports Show','体育赛事表'],
+			train:['Train query','火车时刻查询表']
+		},
         main:{
 	        index:['Index','功能列表']
 	        ,aboutMe:['About Me','关于我们']

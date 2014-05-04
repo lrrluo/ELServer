@@ -22,6 +22,7 @@ angular.module('L.component.common')
 					,{name:language.advice[sign],active:false}
 					,{name:language.aboutMe[sign],active:false}
 				];
+				$scope.cls = $scope.option.class;
 
 
 				$scope.switch = function(index){

@@ -39,9 +39,12 @@ angular.module('easyApp')
             }
             $scope.buttons = [];
             $scope.dayButtons = [
-                {name: language.ls[cookie.getLang()],value: 0,active: true},
-                {name: language.day[cookie.getLang()],value: 1,active: false},
-                {name: language.night[cookie.getLang()],value: 2,active: false}
+                //{name: language.ls[cookie.getLang()],value: 0,active: true},
+                //{name: language.day[cookie.getLang()],value: 1,active: false},
+                //{name: language.night[cookie.getLang()],value: 2,active: false}
+				{name: language.ls[1],value: 0,active: true},
+				{name: language.day[1],value: 1,active: false},
+				{name: language.night[1],value: 2,active: false}
             ];
 
             for(i = 0; i < count;i++){
@@ -69,7 +72,8 @@ angular.module('easyApp')
                     })
             }
 
-            init(cookie.getLang());
+            //init(cookie.getLang());
+			init(1);
             $scope.getZhibo(0);
 
             $scope.showTime = function(val){
@@ -85,7 +89,8 @@ angular.module('easyApp')
 
 
             $scope.$on('switchLang',function(e,index){
-                init(cookie.getLang());
+                //init(cookie.getLang());
+				init(1);
             });
 
             function parseTime(data){

@@ -1,15 +1,15 @@
 //
    Created by L on 14-3-18.
-p herer is wather view~~~
-//.box
+.box
     .box-header.well(data-original-title)
         h2
             i.icon-edit
             span {{title}}
-    .box-content(ng-hide="loading")
+    .box-content.uk-form(ng-hide="loading")
         .input-append
-            input.span2(type='text',id='inputName', ng-model='city',placeholder='{{phCityName}}')
-            button.btn.btn-primary(type="button",ng-click="getWeather(city)"){{search_T}}
+            input(type='text',id='inputName', ng-model='city',placeholder='{{phCityName}}')
+            button.uk-button.uk-button-primary(type="button",ng-click="getWeather(city)") {{search_T}}
+            button.uk-button.uk-button-primary(type="button",ng-click="reflesh(city)") {{flesh_T}}
         highchart(id='char1',config='chartConfig')
     div(ng-show="loading")
         img.ajax-loader(src="theme/img/ajax-loaders/ajax-loader-7.gif")

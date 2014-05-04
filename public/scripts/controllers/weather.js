@@ -9,6 +9,8 @@ angular.module('easyApp')
         ['$scope','$location','cookie','Language', '$http', function ($scope, $location, cookie, Language, $http) {
 
             //get the local city by baiduMap api and get the local weather
+			$scope.title = 'weather';
+			var saveCity;
             setTimeout(function(){
                 var myCity = new BMap.LocalCity();
                 myCity.get(function(resutl){
@@ -16,6 +18,7 @@ angular.module('easyApp')
                     console.log(city)
                     city = city.replace(/市/,'');
                     console.log(city);
+					$scope.city = city;
                     $scope.getWeather(city);
                 });
             },0)
@@ -26,10 +29,12 @@ angular.module('easyApp')
                 $scope.title = language.title[sign];
                 $scope.cityName = language.cityName[sign] ;
                 $scope.search_T = commonLang.sear[sign];
+				$scope.flesh_T = commonLang.reflesh[sign];
                 $scope.phCityName = language.placeholderCity[sign];
             }
 
-            init(cookie.getLang());
+            //init(cookie.getLang());
+			init(1);
 
             function chartSeries(data) {
                 var ret = [];
@@ -38,7 +43,8 @@ angular.module('easyApp')
                 }
                 else{
                     ret[0] = {
-                        name: language.lowTem[cookie.getLang()],
+						//name: language.lowTem[cookie.getLang()],
+						name: language.lowTem[1],
                         data: [
                             +data[5].split('\/')[0].match(/\d+/)[0],
                             +data[12].split('\/')[0].match(/\d+/)[0],
@@ -46,7 +52,8 @@ angular.module('easyApp')
                         ]
                     }
                     ret[1] = {
-                        name: language.highTem[cookie.getLang()],
+                        //name: language.highTem[cookie.getLang()],
+						name: language.highTem[1],
                         data: [
                             +data[5].split('\/')[1].match(/\d+/)[0],
                             +data[12].split('\/')[1].match(/\d+/)[0],
@@ -58,6 +65,12 @@ angular.module('easyApp')
             }
 
 
+			$scope.reflesh = function(){
+				if(saveCity){
+					$scope.getWeather(saveCity);
+				}
+				return false;
+			};
 
             $scope.getWeather = function(city){
                 if(city){
@@ -68,11 +81,13 @@ angular.module('easyApp')
                     $http.get('/service/weather?city='+city).success(function(data){
                         console.log(data);
                         if(!data[1]){
-                            alert(language.errorCity[cookie.getLang()]);
+                            //alert(language.errorCity[cookie.getLang()]);
+							alert(language.errorCity[1]);
                             $scope.city = "";
                             $scope.loading  = false;
                             return false;
                         }
+						saveCity = city;
                         $scope.chartConfig = {
                             options : {
                                 chart:{
@@ -136,7 +151,8 @@ angular.module('easyApp')
 
 
             $scope.$on('switchLang',function(e,index){
-                init(cookie.getLang());
+                //init(cookie.getLang());
+				init(1);
             });
 
 }])

@@ -15,17 +15,24 @@ angular.module('easyApp', [
 		'ngSanitize',
 		'ngRoute'
 	])
-	.config(['$stateProvider', '$routeProvider', function ($stateProvider, $routerProvider) {
-		$routerProvider.otherwise("/service");
+	.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,$urlRouterProvider ) {
+		//$routerProvider.otherwise("/service");
+		$urlRouterProvider.otherwise('/service');
 		$stateProvider
 			.state('service', {
 				url:'/service',
 				templateUrl: 'views/service'
+				,controller: 'ServiceCtrl'
 			})
 			.state('service.weather', {
 				url: '/weather',
 				templateUrl:'views/weather'
 				,controller: 'WeatherCtrl'
+			})
+			.state('service.zhibo', {
+				url: '/zhibo',
+				templateUrl:'views/zhibo'
+				,controller: 'ZhiboCtrl'
 			})
 
 

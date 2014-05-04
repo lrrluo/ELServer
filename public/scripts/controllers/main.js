@@ -6,10 +6,10 @@ angular.module('easyApp')
         var language = Language["main"]
 			,sign = 1;
 
-
 		$scope.option = {
 			menu:{
 				name: 'topMenu',
+				class:'D-nav',
 				items:[
 					 {url:'service',name:language.index[sign],active:true}
 					,{url:'login',name:language.login[sign],active:false}

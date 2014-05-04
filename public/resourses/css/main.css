@@ -20,8 +20,17 @@ div {
 .pdb10 {
   padding-left: 10px;
 }
+.pdt15 {
+  padding-top: 15px;
+}
+.pd15 {
+  padding: 15px;
+}
 ul {
   list-style: none;
+}
+.overhidden {
+  overflow: hidden;
 }
 .D-dropdown {
   float: right;
@@ -80,4 +89,39 @@ ul {
   text-decoration: none;
   cursor: pointer;
   color: azure;
+}
+.D-tab {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #000000;
+}
+.D-tab:before {
+  content: '';
+  display: table;
+}
+.D-tab:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.D-tab > li {
+  margin-bottom: -1px;
+  float: left;
+  position: relative;
+}
+.D-tab > li > a {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-bottom-width: 0;
+  color: #1d8acb;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+}
+.D-tab > li > a.active {
+  border-color: #000000;
+  border-bottom-color: transparent;
+  background: #fff;
+  color: #666;
 }
