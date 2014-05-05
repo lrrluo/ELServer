@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('corsNgApp')
+/*angular.module('corsNgApp')
   .factory('Baidumap', function Baidumap() {
     // AngularJS will instantiate a singleton by calling "new" on this function
         var map,
@@ -242,7 +242,7 @@ angular.module('corsNgApp')
 
 
 
-
+/*
         function cleanMap(){
             cleanTimer();
             cleanMarkers();

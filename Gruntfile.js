@@ -3,6 +3,12 @@
  * Created by L on 14-4-19.
  */
 module.exports = function(grunt) {
+	var CONFIG_FILES = [
+		'Gruntfile.js'
+	];
+	var CLIENT_FILES = [
+		'public/scripts/**/*.js'
+	];
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
 		less: {
@@ -19,14 +25,45 @@ module.exports = function(grunt) {
 			}
 		},
 		jshint: {
-			files: [ 'public/scripts/**/*.js', 'public/javascripts/*.js'],
+			config: {
+				files: {
+					src: CONFIG_FILES
+				},
+				options: {
+					node: true
+				}
+			},
+			client: CLIENT_FILES,
 			options: {
-				//这里是覆盖JSHint默认配置的选项
+				asi:true,
+				curly:true,
+				latedef:true,
+				forin:false,
+				noarg:false,
+				sub:true,
+				undef:true,
+				unused:'vars',
+				boss:true,
+				eqnull:true,
+				browser:true,
+				laxcomma:true,
+				devel:true,
+				smarttabs:true,
+				predef:[
+					"require"
+					,"define"
+					,"console"
+					,"extend"
+					,"LANG"
+					,"ROOT"
+					,"PUBJS"
+					,"_T"
+					,"seajs"
+					,"BASE"
+				],
 				globals: {
-					jQuery: true,
-					console: true,
-					module: true,
-					document: true
+					jQuery: true
+					,browser:true
 				}
 			}
 		},

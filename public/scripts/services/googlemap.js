@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('corsNgApp')
+/* angular.module('corsNgApp')
   .factory('Googlemap', function Googlemap() {
     // AngularJS will instantiate a singleton by calling "new" on this function
         // 通过 require 引入依赖
@@ -59,6 +59,7 @@ angular.module('corsNgApp')
                          map: map,
                          position: results[0].geometry.location
                          });*/
+/*
                     } else {
                         alert("Geocode was not successful for the following reason: " + status);
                     }
