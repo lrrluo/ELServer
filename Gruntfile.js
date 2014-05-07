@@ -9,8 +9,31 @@ module.exports = function(grunt) {
 	var CLIENT_FILES = [
 		'public/scripts/**/*.js'
 	];
+	var MIN_FILES =[
+		'public/scripts/**/*.js'
+	];
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
+		concat:{
+			options:{
+				separator: ';',
+				stripBanners: true
+			},
+			dist: {
+				src: MIN_FILES,
+				dest: 'public/jsMin/all.js'
+			}
+		},
+		uglify:{
+			options:{
+
+			},
+			dist:{
+				files:{
+					'public/jsMin/all.min.js':'public/jsMin/all.js'
+				}
+			}
+		},
 		less: {
 			development: {
 				options: {
@@ -82,7 +105,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.registerTask('css', ['less']);
 	grunt.registerTask('js', ['jshint']);
 	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('minjs', ['concat','uglify']);
 };

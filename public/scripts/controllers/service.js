@@ -4,7 +4,7 @@
 'use strict';
 
 angular.module('easyApp')
-	.controller('ServiceCtrl', function ($scope,cookie,Language) {
+	.controller('ServiceCtrl',['$scope','cookie','Language', function ($scope,cookie,Language) {
 		var language = Language["service"]
 			,sign = 1;
 		$scope.option = {
@@ -22,4 +22,4 @@ angular.module('easyApp')
 					 {name:$scope.language.fileDownLoad[sign],active:false,url:"/fileDownLoad"}*/
 				]
 			}
-	});
+	}]);

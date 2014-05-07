@@ -1,6 +1,6 @@
 'use strict';
 angular.module('easyApp')
-  .factory('cookie', function ($cookieStore) {
+  .factory('cookie',['$cookieStore', function ($cookieStore) {
     // Service logic
     // ...
 
@@ -55,4 +55,4 @@ angular.module('easyApp')
         function setTh(th){
             $cookieStore.put('theme',th);
         }
-  });
+  }]);
