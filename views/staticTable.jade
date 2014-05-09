@@ -1,6 +1,6 @@
 //
    Created by L on 14-3-29.
-table.table.table-striped.table-bordered.datatable
+table.uk-table.table-striped.table-bordered.datatable
     thead
         tr
             th(ng-repeat='h in option.headers') {{h.colName}}
@@ -12,15 +12,13 @@ table.table.table-striped.table-bordered.datatable
 .row-fluid
     .span12
         .dataTables_info 第{{tableConfig.pageNow}}页 共{{tableConfig.totalPage}}页 共{{tableConfig.total}}记录
-    .span12.center
-        .dataTables_paginate.paging_bootstrap.pagination
-            ul
-                li.prev(ng-click="changePage('first')", ng-class="{disabled : !tableConfig.pageState.first}")
-                    a 第一页
-                li.prev(ng-click="changePage('pre')"  , ng-class="{disabled : !tableConfig.pageState.pre}")
-                    a 上一页
-                li.next(ng-click="changePage('next')" , ng-class="{disabled : !tableConfig.pageState.next}")
-                    a 下一页
-                li.next(ng-click="changePage('last')" , ng-class="{disabled : !tableConfig.pageState.last}")
-                    a 最后一页
+        ul.uk-pagination
+            li.prev(ng-click="changePage('first')", ng-class="{disabled : !tableConfig.pageState.first}")
+                a 第一页
+            li.prev(ng-click="changePage('pre')"  , ng-class="{disabled : !tableConfig.pageState.pre}")
+                a 上一页
+            li.next(ng-click="changePage('next')" , ng-class="{disabled : !tableConfig.pageState.next}")
+                a 下一页
+            li.next(ng-click="changePage('last')" , ng-class="{disabled : !tableConfig.pageState.last}")
+                a 最后一页
 

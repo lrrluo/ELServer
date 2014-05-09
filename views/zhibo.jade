@@ -1,16 +1,16 @@
 //
    Created by L on 14-3-19.
 
-.box
-    .box-header.well(data-original-title)
+div
+    div
         h2
             i.icon-edit
             {{title}}
-    .box-content(ng-hide="loading")
+    div(ng-hide="loading")
         p
-            button.btn.btn-primary(ng-repeat="but in buttons",ng-class="{'btn-success': but.active}",ng-click="getZhibo(but.value)"){{but.name}}
-        p
-            button.btn.btn-primary(ng-repeat="but in dayButtons",ng-class="{'btn-success': but.active}",ng-click="showTime(but.value)"){{but.name}}
+            button.uk-button.uk-button-primary(ng-repeat="but in buttons",ng-class="{'uk-button-success': but.active}",ng-click="getZhibo(but.value)"){{but.name}}
+        //p
+            button.uk-button.uk-button-primary(ng-repeat="but in dayButtons",ng-class="{'uk-button-success': but.active}",ng-click="showTime(but.value)"){{but.name}}
         stable(option = 'option')
     div(ng-show="loading")
         img.ajax-loader(src="theme/img/ajax-loaders/ajax-loader-7.gif")

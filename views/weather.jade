@@ -1,12 +1,12 @@
 //
    Created by L on 14-3-18.
-.box
-    .box-header.well(data-original-title)
+div
+    div(data-original-title)
         h2
             i.icon-edit
             span {{title}}
-    .box-content.uk-form(ng-hide="loading")
-        .input-append
+    .uk-form(ng-hide="loading")
+        div
             input(type='text',id='inputName', ng-model='city',placeholder='{{phCityName}}')
             button.uk-button.uk-button-primary(type="button",ng-click="getWeather(city)") {{search_T}}
             button.uk-button.uk-button-primary(type="button",ng-click="reflesh(city)") {{flesh_T}}

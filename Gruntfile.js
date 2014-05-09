@@ -111,4 +111,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('js', ['jshint']);
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('minjs', ['concat','uglify']);
+	grunt.registerTask('alljs', ['concat']);
 };

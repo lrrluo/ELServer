@@ -15,14 +15,14 @@ angular.module('easyApp')
             var tvData = [], time =0 ,language = Language["zhibo"];
 
 
-            time = parseInt(today.format('HH'),10);
-            if( time<= 8){
-               time = 0;
-            }
-            else if(time >8 && time <= 17){
-                time = 1;
-            }
-            else time = 2;
+            //time = parseInt(today.format('HH'),10);
+            //if( time<= 8){
+            //   time = 0;
+            //}
+            //else if(time >8 && time <= 17){
+            //    time = 1;
+            //}
+            //else time = 2;
 
             function init(sign){
                 $scope.title = language.title[sign];
@@ -32,20 +32,20 @@ angular.module('easyApp')
 	                {type:1,colName: language.address[sign],name:'address'}
                 ];
 
-                $scope.dayButtons[0].name = language.ls[sign];
-                $scope.dayButtons[1].name = language.day[sign];
-                $scope.dayButtons[2].name = language.night[sign];
+                //$scope.dayButtons[0].name = language.ls[sign];
+                //$scope.dayButtons[1].name = language.day[sign];
+                //$scope.dayButtons[2].name = language.night[sign];
 
             }
             $scope.buttons = [];
-            $scope.dayButtons = [
-                //{name: language.ls[cookie.getLang()],value: 0,active: true},
-                //{name: language.day[cookie.getLang()],value: 1,active: false},
-                //{name: language.night[cookie.getLang()],value: 2,active: false}
-				{name: language.ls[1],value: 0,active: true},
-				{name: language.day[1],value: 1,active: false},
-				{name: language.night[1],value: 2,active: false}
-            ];
+            //$scope.dayButtons = [
+            //    //{name: language.ls[cookie.getLang()],value: 0,active: true},
+            //    //{name: language.day[cookie.getLang()],value: 1,active: false},
+            //    //{name: language.night[cookie.getLang()],value: 2,active: false}
+			//	{name: language.ls[1],value: 0,active: true},
+			//	{name: language.day[1],value: 1,active: false},
+			//	{name: language.night[1],value: 2,active: false}
+            //];
 
             for(i = 0; i < count;i++){
                 $scope.buttons.push({"active":false,"name": today.format("MM-DD ddd"),"value":i});
@@ -58,15 +58,14 @@ angular.module('easyApp')
                 $scope.loading  = true;
                 $http.get('/service/sportlive?value='+val).success(function(data){
                     //$scope.
-                    //$scope.data = data.content;
-                    parseTime(data.content);
-                    console.log(data);
+	                console.log(data.content);
+	                $scope.option.data = data.content;
+                    //parseTime(data.content);
                     $scope.loading  = false;
                     for(i =0 ;i<count ; i++){
                         $scope.buttons[i].active = false;
                     }
                     $scope.buttons[val].active = true;
-                    $scope.showTime(time);
                 }).error(function(){
                         $scope.loading  = false;
                     })
@@ -76,16 +75,14 @@ angular.module('easyApp')
 			init(1);
             $scope.getZhibo(0);
 
-            $scope.showTime = function(val){
-                time = val;
-                $scope.data = tvData[val];
-                $scope.option.data = tvData[val];
+            //$scope.showTime = function(val){
+            //    //time = val;
 
-                for(var i =0;i<3 ;i++){
-                    $scope.dayButtons[i].active = false;
-                }
-                $scope.dayButtons[val].active = true;
-            }
+            //    for(var i =0;i<3 ;i++){
+            //        $scope.dayButtons[i].active = false;
+            //    }
+            //    $scope.dayButtons[val].active = true;
+            //}
 
 
             $scope.$on('switchLang',function(e,index){

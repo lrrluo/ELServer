@@ -1,15 +1,15 @@
 //
    Created by L on 14-3-23.
 
-.box
-    .box-header.well(data-original-title)
+div
+    div(data-original-title)
         h2
             i.icon-edit
             span {{title}}
-    .box-content(ng-hide="loading")
-        .input-append
-            input.span2(type='text',id='inputName', ng-model='bus',placeholder='{{phBusName}}')
-            button.btn.btn-primary(type="button",ng-click="getBus(bus)"){{search_T}}
+    .uk-form(ng-hide="loading")
+        div
+            input(type='text',id='inputName', ng-model='bus',placeholder='{{phBusName}}')
+            button.uk-button.uk-button-primary(type="button",ng-click="getBus(bus)"){{search_T}}
         select(ng-hide="loading",ng-model="route",ng-change="switchRoute()")
             option(value=0) 上行
             option(value=1) 下行

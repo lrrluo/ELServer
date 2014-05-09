@@ -34,54 +34,14 @@ angular.module('easyApp', [
 				templateUrl:'views/zhibo'
 				,controller: 'ZhiboCtrl'
 			})
-
-
-		//$urlRouteProvider
-			//.when('/weather', {
-			//    templateUrl: 'views/weather',
-			//    controller: 'WeatherCtrl'
-			//})
-			//.when('/zhibo', {
-			//    templateUrl: 'views/zhibo',
-			//    controller: 'ZhiboCtrl'
-			//})
-			//.when('/bus', {
-			//    templateUrl: 'views/bus',
-			//    controller: 'BusCtrl'
-			//})
-			//.when('/train', {
-			//    templateUrl: 'views/train',
-			//    controller: 'TrainCtrl'
-			//})
-			//.when('/log', {
-			//    templateUrl: 'views/log.html',
-			//    controller: 'LogCtrl'
-			//})
-			//.when('/fileDownLoad', {
-			//    templateUrl: 'views/filedownLoad.html',
-			//    controller: 'FiledownloadCtrl'
-			//})
-			//.when('/zone', {
-			//    templateUrl: 'views/zone.html',
-			//    controller: 'ZoneCtrl'
-			//})
-			//.when('/zone/add/:id', {
-			//    templateUrl: 'views/addzone.html',
-			//    controller: 'AddzoneCtrl'
-			//})
-			//.when('/userManager', {
-			//    templateUrl: 'views/usermanager.html',
-			//    controller: 'UsermanagerCtrl'
-			//})
-			//.when('/userManager/add/:id', {
-			//    templateUrl: 'views/addUser.html',
-			//    controller: 'AdduserCtrl'
-			//})
-			//.when('/', {
-			//    templateUrl: 'test.html',
-			//    controller: 'TestCtrl'
-			//})
-			//.otherwise({
-			//	redirectTo: '/mapView'
-			//});
+			.state('service.bus', {
+				url: '/bus',
+				templateUrl: 'views/bus',
+				controller: 'BusCtrl'
+			})
+			.state('service.train', {
+				url: '/train',
+				templateUrl: 'views/train',
+				controller: 'TrainCtrl'
+			})
 	}]);

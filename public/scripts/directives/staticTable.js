@@ -17,8 +17,8 @@ angular.module('easyApp')
 
                 $scope.$watch("option.data", function(data){
                     if(data){
-                        $scope.tableConfig.pageSize = 8 ;
-                        $scope.tableConfig.totalPage = Math.ceil(data.length / 8);
+                        $scope.tableConfig.pageSize = 50 ;
+                        $scope.tableConfig.totalPage = Math.ceil(data.length / 50);
                         $scope.tableConfig.pageNow = 1;
                         $scope.tableConfig.total = data.length;
                         $scope.tableConfig.pageState = {first:true,last:false,prev:false,next:false};
