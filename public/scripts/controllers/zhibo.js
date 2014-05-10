@@ -58,7 +58,7 @@ angular.module('easyApp')
                 $scope.loading  = true;
                 $http.get('/service/sportlive?value='+val).success(function(data){
                     //$scope.
-	                console.log(data.content);
+	                //console.log(data.content);
 	                $scope.option.data = data.content;
                     //parseTime(data.content);
                     $scope.loading  = false;

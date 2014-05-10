@@ -8,6 +8,7 @@ angular.module('easyApp')
 
 		$scope.option = {
 			menu:{
+				'routeLevel':1,
 				name: 'topMenu',
 				class:'D-nav',
 				items:[
@@ -156,15 +157,15 @@ angular.module('easyApp')
 		$document.on('click', function(e){
 			$scope.$broadcast('click',e);
 		});
+		$scope.$on("$locationChangeSuccess",function(e,newpath,old){
+			//第一次加载时，更新tab值。
+			if(newpath == old){
+				console.log('fire');
+				setTimeout(function(){
+					$scope.$broadcast('updateRoute',newpath);
+				},500);
+			}
+		})
 
 
-        //$scope.$on("$locationChangeSuccess",function(e,path){
-        //    var i = 0;
-        //    for(i; i < $scope.headers.length ; i++){
-        //        $scope.headers[i].active = false;
-        //        if(path.indexOf($scope.headers[i].url) >= 0){
-        //            $scope.headers[i].active = true;
-        //        }
-        //    }
-        //})
   }]);
