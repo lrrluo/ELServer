@@ -165,8 +165,8 @@ angular.module('easyApp')
 				name: 'topMenu',
 				class:'D-nav',
 				items:[
-					 {url:'service',name:language.index[sign],active:false}
-					,{url:'login',name:language.login[sign],active:true}
+					 {url:'service',name:language.service[sign],active:true}
+					,{url:'login',name:language.login[sign],active:false}
 					,{url:'advice',name:language.advice[sign],active:false}
 					,{url:'about',name:language.aboutMe[sign],active:false}
 				]
@@ -229,36 +229,10 @@ angular.module('easyApp')
                 {name:$scope.language.fileDownLoad[sign],active:false,url:"/fileDownLoad"}*/
             ]
 
-            path = $location.path();
-            for(i = 0; i < $scope.headers.length ; i++){
-                $scope.headers[i].active = false;
-                if(path.indexOf($scope.headers[i].url) >= 0){
-                    $scope.headers[i].active = true;
-                    findUrl = true;
-                }
-            }
-            if(!findUrl){
-                $scope.headers[0].active = true;
-            }
         }
 
         //init(0);
 
-        //$scope.switchLang = function(index){
-        //    var i;
-        //    if($scope.langs[index].active){
-        //        return false;
-        //    }
-        //    else{
-        //        for(i = 0; i<$scope.langs.length; i++){
-        //            $scope.langs[i].active = false;
-        //        }
-        //        $scope.langs[index].active = true;
-        //        cookie.setLang(index);
-        //        init(cookie.getLang());
-        //        $scope.$broadcast("switchLang",index);
-        //    }
-        //}
 
         //$scope.switchTheme = function(index){
         //    var i;
@@ -275,14 +249,6 @@ angular.module('easyApp')
         //    }
         //}
 
-        //$scope.jump = function(url,index){
-        //    var i;
-        //    for(i = 0; i<$scope.headers.length; i++){
-        //        $scope.headers[i].active = false;
-        //    }
-        //    $scope.headers[index].active = true;
-        //    $location.path($scope.headers[index].url);
-        //}
 
 		$scope.$on('dropdown',function(e, p){
 			console.log(e,p);
@@ -313,11 +279,14 @@ angular.module('easyApp')
 		$scope.$on("$locationChangeSuccess",function(e,newpath,old){
 			//第一次加载时，更新tab值。
 			if(newpath == old){
-				console.log('fire');
 				setTimeout(function(){
 					$scope.$broadcast('updateRoute',newpath);
-				},500);
+				},700);
 			}
+			else{
+				$scope.$broadcast('updateRoute',newpath);
+			}
+
 		})
 
 
@@ -334,7 +303,7 @@ angular.module('easyApp')
 				class:'D-tab',
 				items:[
 					{name:language.weather[sign],active:true,url:"weather",icon:'icon-home'},
-					{name:language.sportLive[sign],active:false,url:"zhibo",icon:'icon-picture'},
+					{name:language.zhibo[sign],active:false,url:"zhibo",icon:'icon-picture'},
 					{name:language.bus[sign],active:false,url:"bus",icon:'icon-picture'},
 					{name:language.train[sign],active:false,url:"train",icon:'icon-picture'}
 					/*                {name:$scope.language.online[sign],active:false,url:"/online"},
@@ -725,6 +694,54 @@ angular.module('easyApp')
             }
         }])
 ;'use strict';
+
+angular.module('L.component.common')
+	.directive('breadcrumb',['$http','cookie','Language','$location', 'util',function ($http,$cookie,Language, $location, util) {
+		return {
+			templateUrl:"/views/breadcrumb",
+			restrict: 'AE',
+			scope:{
+				option: '='
+			},
+			link: function postLink($scope, element, attrs) {
+
+				var sign = 1
+					,path
+					,language = Language["main"];
+
+				$scope.switch = function(index){
+					var nowpath = $location.path();
+					$location.path(util.setPath(nowpath, path[index], index+1));
+				};
+
+				function updateBread(){
+					var i = 0
+						,o
+						,items = [];
+					for(i; i < path.length ; i++){
+						for(o in Language){
+							if(Language[o][path[i]]){
+								items.push(Language[o][path[i]][sign]);
+								break;
+							}
+						}
+					}
+					$scope.items = items;
+				}
+
+				$scope.$on("updateRoute",function(e,routePath){
+					path = util.getPathArr(routePath);
+					updateBread();
+					$scope.$apply();
+				});
+				$scope.$on("$locationChangeSuccess",function(e,routePath){
+					path = util.getPathArr(routePath);
+					updateBread();
+				});
+
+			}
+		};
+	}]);'use strict';
 
 angular.module('L.component.common')
 	.directive('dropdown',['$http','cookie','Language',function ($http,$cookie,Language) {
@@ -1131,25 +1148,11 @@ angular.module('L.component.common')
 			},
 			link: function postLink($scope, element, attrs) {
 
-				var sign = 1
-					,language = Language["main"];
+				var sign = 1;
 
-				$scope.items = $scope.option ? $scope.option.items:[
-					{name:language.index[sign],active:true}
-					,{name:language.login[sign],active:false}
-					,{name:language.advice[sign],active:false}
-					,{name:language.aboutMe[sign],active:false}
-				];
+				$scope.items = $scope.option.items
 				$scope.cls = $scope.option.class;
 
-				//$scope.jump = function(url,index){
-				//    var i;
-				//    for(i = 0; i<$scope.headers.length; i++){
-				//        $scope.headers[i].active = false;
-				//    }
-				//    $scope.headers[index].active = true;
-				//    $location.path($scope.headers[index].url);
-				//}
 
 				$scope.switch = function(index,url){
 					var path
@@ -1173,10 +1176,8 @@ angular.module('L.component.common')
 
 				$scope.$on("updateRoute",function(e,routePath){
 					var i = 0
-						,path = routePath.split('#')[1];
-					path = path.split('/');
-					path.splice(0,1)
-					path = path[$scope.option.routeLevel-1];
+						,path;
+					path = util.getPathArr(routePath)[$scope.option.routeLevel-1];
 					for(i; i < $scope.items.length ; i++){
 						$scope.items[i].active = false;
 						if(path == $scope.items[i].url){
@@ -1184,6 +1185,7 @@ angular.module('L.component.common')
 							$scope.items[i].active = true;
 						}
 					}
+					$scope.$apply();
 				})
 
 			}
@@ -1937,11 +1939,11 @@ angular.module('easyApp')
 			bus:["GuangZhou RealTime bus",'广州实时公交'],
 			func:['Function','功能'],
 			weather:['Weather','天气查询'],
-			sportLive:['Sports Show','体育赛事表'],
+			zhibo:['Sports Show','体育赛事表'],
 			train:['Train query','火车时刻查询表']
 		},
         main:{
-	        index:['Index','功能列表']
+	        service:['Index','功能列表']
 	        ,aboutMe:['About Me','关于我们']
 	        ,advice:['Give Advice','给建议']
 	        ,login:['Login','登录']
@@ -1957,52 +1959,6 @@ angular.module('easyApp')
             weather:['Weather','天气查询'],
             sportLive:['Sports Show','体育赛事表'],
             train:['Train query','火车时刻查询表']
-        },
-        mapHistory:{
-            title:['Path View',"轨迹显示"],
-            mobileStation:['Select mobile station:',"请选择移动站:"],
-            state:["Select the state:",'请选择解状态'],
-            color:['Select the color to show:',"请选择要显示的颜色："],
-            startTime:['Start Time:',"开始时间："],
-            endTime:['End Time',"结束时间"],
-            back:['Clear',"清空"],
-            submit:['Show Path',"显示轨迹"]
-        },
-        online:{
-            title:['Online Users Display',"在线用户显示"],
-            userName:['User Name',"用户名"],
-            serverType:["Server Type",'服务类型'],
-            account:['Account',"资金"],
-            expirationDate:['Expiration Date',"过期时间"]
-        },
-        userManager:{
-            title:['UserManager',"用户管理"],
-            add:['Add User',"增加用户"],
-            userName:['User Name',"用户名"],
-            serverType:["Server Type",'服务类型'],
-            account:['Account',"资金"],
-            expirationDate:['Expiration Date',"过期时间"],
-            phone: ['Phone',"电话"],
-            online: ['Online State',"在线状态"]
-        },
-        zone:{
-            title:['Zone Manager',"作业区域管理"],
-            add:['Add Zone',"增加作业区域"],
-            zoneName:['Zone Name',"作业区域名"],
-            back:['Back',"返回"],
-            submit:['Submit',"提交记录"],
-            points:["Points",'经纬度集合']
-        },
-        log:{
-            title:['Diary Display',"日志显示"],
-            userName:['User Name',"用户名"],
-            logTime:["Log Time",'记录时间'],
-            content:['content',"内容"]
-        },
-        fileDownload:{
-            title:['File List Download',"文件列表下载"],
-            fileName:["File Name","文件名"]
-
         }
 
     });
@@ -2066,9 +2022,21 @@ angular.module('L.component.common')
 	.factory('util',[ function () {
 		return {
 			'setPath': setPath
+			,'getPathArr':getPathArray
 		};
+		function getPathArray(path){
+			path = path.split('#')[1];
+			path = path.split('/');
+			path.splice(0,1)
+			return path;
+		}
+		//设置全局的浏览器的path.
+		//path #号后的值。
+		//newpath,要插入的新值。
+		//level.要插入的位置。
+		//eg:path:/service/bus   newpath: weather,  level:1
+		//return /service/weather
 		function setPath(path,newPath, level){
-			console.log(arguments);
 			var path = path.split('/');
 			path.splice(0,1);
 			path[level-1] = newPath;

@@ -1,0 +1,7 @@
+//
+   Created by L on 14-5-10.
+ul(class='{{cls}} uk-breadcrumb pdt15 pdl15')
+    li(ng-repeat="item in items track by $index")
+        a.uk-active(ng-if="!$last",ng-click="switch($index)") {{item}}
+        span(ng-if="$last") {{item}}
+

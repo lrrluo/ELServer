@@ -2,6 +2,5 @@
    Created by L on 14-4-22.
 ul(class='{{cls}}')
     li(ng-repeat="item in items track by $index")
-        //a(ui-sref = '{{item.url}}',ng-click="switch($index, item.url)",ng-class="{active:item.active}") {{item.name}}
         a(ng-click="switch($index, item.url)",ng-class="{active:item.active}") {{item.name}}
 

@@ -12,7 +12,7 @@ angular.module('easyApp')
 				name: 'topMenu',
 				class:'D-nav',
 				items:[
-					 {url:'service',name:language.index[sign],active:true}
+					 {url:'service',name:language.service[sign],active:true}
 					,{url:'login',name:language.login[sign],active:false}
 					,{url:'advice',name:language.advice[sign],active:false}
 					,{url:'about',name:language.aboutMe[sign],active:false}
@@ -76,36 +76,10 @@ angular.module('easyApp')
                 {name:$scope.language.fileDownLoad[sign],active:false,url:"/fileDownLoad"}*/
             ]
 
-            path = $location.path();
-            for(i = 0; i < $scope.headers.length ; i++){
-                $scope.headers[i].active = false;
-                if(path.indexOf($scope.headers[i].url) >= 0){
-                    $scope.headers[i].active = true;
-                    findUrl = true;
-                }
-            }
-            if(!findUrl){
-                $scope.headers[0].active = true;
-            }
         }
 
         //init(0);
 
-        //$scope.switchLang = function(index){
-        //    var i;
-        //    if($scope.langs[index].active){
-        //        return false;
-        //    }
-        //    else{
-        //        for(i = 0; i<$scope.langs.length; i++){
-        //            $scope.langs[i].active = false;
-        //        }
-        //        $scope.langs[index].active = true;
-        //        cookie.setLang(index);
-        //        init(cookie.getLang());
-        //        $scope.$broadcast("switchLang",index);
-        //    }
-        //}
 
         //$scope.switchTheme = function(index){
         //    var i;
@@ -122,14 +96,6 @@ angular.module('easyApp')
         //    }
         //}
 
-        //$scope.jump = function(url,index){
-        //    var i;
-        //    for(i = 0; i<$scope.headers.length; i++){
-        //        $scope.headers[i].active = false;
-        //    }
-        //    $scope.headers[index].active = true;
-        //    $location.path($scope.headers[index].url);
-        //}
 
 		$scope.$on('dropdown',function(e, p){
 			console.log(e,p);
@@ -160,11 +126,14 @@ angular.module('easyApp')
 		$scope.$on("$locationChangeSuccess",function(e,newpath,old){
 			//第一次加载时，更新tab值。
 			if(newpath == old){
-				console.log('fire');
 				setTimeout(function(){
 					$scope.$broadcast('updateRoute',newpath);
-				},500);
+				},700);
 			}
+			else{
+				$scope.$broadcast('updateRoute',newpath);
+			}
+
 		})
 
 

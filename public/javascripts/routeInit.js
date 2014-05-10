@@ -31,6 +31,10 @@ exports.init = function(app,routes){
 		res.render('service',{});
 	})
 
+	app.get('/views/breadcrumb',function(req,res){
+		res.render('breadcrumb',{});
+	})
+
 	app.get('/views/nav',function(req,res){
 		res.render('nav',{});
 	})

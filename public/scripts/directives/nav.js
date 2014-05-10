@@ -13,25 +13,11 @@ angular.module('L.component.common')
 			},
 			link: function postLink($scope, element, attrs) {
 
-				var sign = 1
-					,language = Language["main"];
+				var sign = 1;
 
-				$scope.items = $scope.option ? $scope.option.items:[
-					{name:language.index[sign],active:true}
-					,{name:language.login[sign],active:false}
-					,{name:language.advice[sign],active:false}
-					,{name:language.aboutMe[sign],active:false}
-				];
+				$scope.items = $scope.option.items
 				$scope.cls = $scope.option.class;
 
-				//$scope.jump = function(url,index){
-				//    var i;
-				//    for(i = 0; i<$scope.headers.length; i++){
-				//        $scope.headers[i].active = false;
-				//    }
-				//    $scope.headers[index].active = true;
-				//    $location.path($scope.headers[index].url);
-				//}
 
 				$scope.switch = function(index,url){
 					var path
@@ -55,10 +41,8 @@ angular.module('L.component.common')
 
 				$scope.$on("updateRoute",function(e,routePath){
 					var i = 0
-						,path = routePath.split('#')[1];
-					path = path.split('/');
-					path.splice(0,1)
-					path = path[$scope.option.routeLevel-1];
+						,path;
+					path = util.getPathArr(routePath)[$scope.option.routeLevel-1];
 					for(i; i < $scope.items.length ; i++){
 						$scope.items[i].active = false;
 						if(path == $scope.items[i].url){
@@ -66,6 +50,7 @@ angular.module('L.component.common')
 							$scope.items[i].active = true;
 						}
 					}
+					$scope.$apply();
 				})
 
 			}

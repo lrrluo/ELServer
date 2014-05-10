@@ -13,7 +13,7 @@ angular.module('easyApp')
 				class:'D-tab',
 				items:[
 					{name:language.weather[sign],active:true,url:"weather",icon:'icon-home'},
-					{name:language.sportLive[sign],active:false,url:"zhibo",icon:'icon-picture'},
+					{name:language.zhibo[sign],active:false,url:"zhibo",icon:'icon-picture'},
 					{name:language.bus[sign],active:false,url:"bus",icon:'icon-picture'},
 					{name:language.train[sign],active:false,url:"train",icon:'icon-picture'}
 					/*                {name:$scope.language.online[sign],active:false,url:"/online"},

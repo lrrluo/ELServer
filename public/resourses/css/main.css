@@ -9,22 +9,25 @@ div {
   margin: 0;
 }
 .pdl10 {
-  padding-left: 10px;
+  padding-left: 10px !important;
 }
 .pdr10 {
-  padding-left: 10px;
+  padding-left: 10px !important;
 }
 .pdt10 {
-  padding-left: 10px;
+  padding-left: 10px !important;
 }
 .pdb10 {
-  padding-left: 10px;
+  padding-left: 10px !important;
 }
 .pdt15 {
-  padding-top: 15px;
+  padding-top: 15px !important;
+}
+.pdl15 {
+  padding-left: 15px !important;
 }
 .pd15 {
-  padding: 15px;
+  padding: 15px !important;
 }
 ul {
   list-style: none;
